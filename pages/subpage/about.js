@@ -1,7 +1,14 @@
-import React from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import React, { useEffect } from "react";
 
 function About() {
-
+    useEffect(() => {
+        AOS.init({
+            duration: 2000
+        });
+        AOS.refresh();
+    });
     return (
         <div id="about-me">
             <div style={{ height: "70px" }}></div>

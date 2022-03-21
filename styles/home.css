@@ -40,6 +40,18 @@
     color: #6fff75;
 }
 
+.Terminal-term {
+    height: 280px !important;
+}
+
+.Terminal-code {
+    font-size: 14px !important;
+}
+
+.Terminal-control-btn{
+    display: none !important;
+}
+
 @media (max-width: 575.98px) {
     #index {
         padding-top: 70px;
