@@ -48,7 +48,15 @@ export default function Home() {
       'cmd': false
     },
     {
+      'text': '',
+      'cmd': false
+    },
+    {
       'text': 'C#(ASP.Net Framework/Core), Java, Swift, PHP(Laravel)',
+      'cmd': false
+    },
+    {
+      'text': '',
       'cmd': false
     },
     {
