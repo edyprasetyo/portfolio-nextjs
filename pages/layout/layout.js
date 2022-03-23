@@ -11,10 +11,9 @@ export default function Layout({ children }) {
                 <title>Edy Prasetyo</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <link rel="icon" type="image/x-icon" href="/images/logo_1.ico" />
-                <Script src="https://code.iconify.design/2/2.1.2/iconify.min.js" />
-                <Script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js" />
-
             </Head>
+            <Script src="https://code.iconify.design/2/2.1.2/iconify.min.js" />
+            <Script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js" />
             <Header />
             {children}
             <Footer />
