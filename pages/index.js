@@ -14,7 +14,7 @@ export default function Home() {
 
   const termLines = [
     {
-      'text': 'Hello edy',
+      'text': 'Hello',
       'cmd': true
     },
     {
