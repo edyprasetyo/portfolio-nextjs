@@ -10,7 +10,7 @@ function Skills() {
     var settings = {
         dots: true,
         infinite: true,
-        autoplay: true,
+        autoplay: false,
         centerMode: true,
         speed: 500,
         slidesToShow: isMobile ? 1 : 3,
@@ -32,18 +32,21 @@ function Skills() {
                         <div className="card-body">
                             <div className="row mt-2">
                                 <div className="col-md-12">
-                                    <div className="skills-card-title">Mobile App
-                                        Development</div>
+                                    <div className="skills-card-title">Web App Development</div>
                                 </div>
                             </div>
                             <div className="row mt-2">
                                 <div className="col-md-12">
                                     <div className="skills-card-content">
-                                        Android(Java/Kotlin) - Android Studio
+                                        Go Lang - Beego/Gin
                                         <br />
-                                        IOS(Swift) - Xcode
+                                        C# - ASP.Net MVC/ASP.Net Core
                                         <br />
-                                        Flutter - VS Code
+                                        PHP - Laravel
+                                        <br />
+                                        Java Script - ReactJS/Angular
+                                        <br />
+                                        Type Script - ReactJS/Angular
                                     </div>
                                 </div>
                             </div>
@@ -80,18 +83,32 @@ function Skills() {
                         <div className="card-body">
                             <div className="row mt-2">
                                 <div className="col-md-12">
-                                    <div className="skills-card-title">Mobile App
+                                    <div className="skills-card-title">Desktop App
                                         Development</div>
                                 </div>
                             </div>
                             <div className="row mt-2">
                                 <div className="col-md-12">
-                                    <div className="skills-card-content">
-                                        Android(Java/Kotlin) - Android Studio
-                                        <br />
-                                        IOS(Swift) - Xcode
-                                        <br />
-                                        Flutter - VS Code
+                                    <div className="skills-card-content">Winform App - C# / VB.net</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='card-skills-parent'>
+                    <div className="card shadow rounded-3 card-skills">
+                        <div className="card-body">
+                            <div className="row mt-2">
+                                <div className="col-md-12">
+                                    <div className="skills-card-title">Database Management System</div>
+                                </div>
+                            </div>
+                            <div className="row mt-2">
+                                <div className="col-md-12">
+                                    <div className="skills-card-content">SQL Server
+                                        <br /> My SQL
+                                        <br /> Data Warehouse & Analysis Service Using Azure Cloud
                                     </div>
                                 </div>
                             </div>
@@ -104,42 +121,14 @@ function Skills() {
                         <div className="card-body">
                             <div className="row mt-2">
                                 <div className="col-md-12">
-                                    <div className="skills-card-title">Mobile App
-                                        Development</div>
+                                    <div className="skills-card-title">Reporting</div>
                                 </div>
                             </div>
                             <div className="row mt-2">
                                 <div className="col-md-12">
-                                    <div className="skills-card-content">
-                                        Android(Java/Kotlin) - Android Studio
-                                        <br />
-                                        IOS(Swift) - Xcode
-                                        <br />
-                                        Flutter - VS Code
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className='card-skills-parent'>
-                    <div className="card shadow rounded-3 card-skills">
-                        <div className="card-body">
-                            <div className="row mt-2">
-                                <div className="col-md-12">
-                                    <div className="skills-card-title">Mobile App
-                                        Development</div>
-                                </div>
-                            </div>
-                            <div className="row mt-2">
-                                <div className="col-md-12">
-                                    <div className="skills-card-content">
-                                        Android(Java/Kotlin) - Android Studio
-                                        <br />
-                                        IOS(Swift) - Xcode
-                                        <br />
-                                        Flutter - VS Code
+                                    <div className="skills-card-content">Power BI
+                                        <br /> Crystall Report
+                                        <br /> RDLC
                                     </div>
                                 </div>
                             </div>
