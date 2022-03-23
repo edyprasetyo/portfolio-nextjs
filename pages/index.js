@@ -1,11 +1,28 @@
 import Terminal from '@nitric/react-animated-term';
 import '@nitric/react-animated-term/css/styles.css';
 import React from 'react';
+import db from '../lib/db';
 import Layout from './layout/layout';
 import About from './subpage/about';
 import Skills from './subpage/skills';
 
-export default function Home() {
+
+
+
+export const getServerSideProps = async ({ req }) => {
+  const token = req.headers.AUTHORIZATION;
+  const list = await db.visitor.findMany();
+  console.log(list);
+  return { props: { list } };
+};
+
+export default function Home({ list }) {
+
+
+
+  // useEffect(() => {
+  //   getData();
+  // });
 
 
   function showProfile() {
@@ -74,6 +91,7 @@ export default function Home() {
           <div className="row">
             <div className="col-lg-6 pt-3 img-profile-parent justify-content-center align-self-center">
               <span onClick={showProfile}>
+                {/* {list[0].IP} */}
                 <img className="img-fluid img-profile" src="/images/profile_4.png" />
               </span>
             </div>
