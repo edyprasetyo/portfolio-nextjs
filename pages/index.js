@@ -1,6 +1,5 @@
 import Terminal from '@nitric/react-animated-term';
 import '@nitric/react-animated-term/css/styles.css';
-import moment from 'moment';
 import React from 'react';
 import Layout from './layout/layout';
 import About from './subpage/about';
@@ -8,7 +7,6 @@ import Skills from './subpage/skills';
 
 export default function Home() {
 
-  var o = moment().format('MMMM Do YYYY, h:mm:ss a')
 
   function showProfile() {
     window.open('https://www.instagram.com/edyprasetyo_', '_blank').focus();
@@ -16,7 +14,7 @@ export default function Home() {
 
   const termLines = [
     {
-      'text': 'Hello dsadas',
+      'text': 'Hello edy',
       'cmd': true
     },
     {
