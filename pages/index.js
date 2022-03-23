@@ -89,8 +89,6 @@ export default function Home() {
                 </strong>
 
               </div>
-
-
               {/* <IndexCode></IndexCode> */}
             </div>
 
