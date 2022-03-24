@@ -46,6 +46,7 @@ export const getServerSideProps = async ({ req, res }) => {
         },
       });
     }
+
     await db.visitor.upsert({
       where: {
         IP: browserID,
