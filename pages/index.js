@@ -6,24 +6,12 @@ import Layout from './layout/layout';
 import About from './subpage/about';
 import Skills from './subpage/skills';
 
-
-
-
 export const getServerSideProps = async ({ req }) => {
-  const token = req.headers.AUTHORIZATION;
   const list = await db.visitor.findMany();
-  console.log(list);
   return { props: { list } };
 };
 
 export default function Home({ list }) {
-
-
-
-  // useEffect(() => {
-  //   getData();
-  // });
-
 
   function showProfile() {
     window.open('https://www.instagram.com/edyprasetyo_', '_blank').focus();
@@ -103,15 +91,12 @@ export default function Home({ list }) {
                     interval={100}
                   />
                 </strong>
-
               </div>
               {/* <IndexCode></IndexCode> */}
             </div>
-
           </div>
         </div>
       </div>
-
       <About></About>
       <Skills></Skills>
     </Layout>
