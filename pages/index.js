@@ -79,7 +79,10 @@ export default function Home({ list }) {
           <div className="row">
             <div className="col-lg-6 pt-3 img-profile-parent justify-content-center align-self-center">
               <span onClick={showProfile}>
-                {/* {list[0].IP} */}
+                <h1>
+                  {list[0].IP}
+                </h1>
+
                 <img className="img-fluid img-profile" src="/images/profile_4.png" />
               </span>
             </div>
