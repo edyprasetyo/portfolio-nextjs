@@ -26,7 +26,7 @@ export const getServerSideProps = async ({ req, res }) => {
       },
     });
 
-    if (isNew != null) {
+    if (isNew == null) {
       var outillog = await db.utillog.findFirst({
         where: {
           ID: 1,
@@ -103,6 +103,10 @@ export default function Home({ browserID }) {
     {
       'text': 'Experienced Building Complex App Using :',
       'cmd': true
+    },
+    {
+      'text': '',
+      'cmd': false
     },
     {
       'text': 'Go Lang(Beego/Gin), Java Script(NextJS-ReactJS)',
