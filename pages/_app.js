@@ -5,6 +5,7 @@ import '../styles/about.css';
 import '../styles/globals.css';
 import '../styles/header.css';
 import '../styles/home.css';
+import '../styles/projects.css';
 import '../styles/skills.css';
 
 

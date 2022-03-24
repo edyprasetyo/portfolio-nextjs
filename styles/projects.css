@@ -1,0 +1,26 @@
+#latest-projects {
+    width: 100%;
+    height: auto;
+}
+
+.img-unicorn {
+    width: 75%;
+    position: relative;
+}
+
+#carousel-unicorn {
+    width: 100%;
+}
+
+.divider {
+    height: 2px;
+    border-radius: 20px;
+    background: #8d8d8d;
+    width: 100%;
+}
+
+@media (max-width: 575.98px) {
+    .img-unicorn {
+        width: 100%;
+    }
+}

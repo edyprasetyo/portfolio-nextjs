@@ -8,6 +8,7 @@ import db from '../lib/db';
 import Tools from '../lib/tools';
 import Layout from './layout/layout';
 import About from './subpage/about';
+import Projects from './subpage/projects';
 import Skills from './subpage/skills';
 
 
@@ -130,6 +131,7 @@ export default function Home({ browserID }) {
       </div>
       <About></About>
       <Skills></Skills>
+      <Projects></Projects>
     </Layout>
 
   )
