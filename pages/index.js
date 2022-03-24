@@ -20,7 +20,33 @@ export const getServerSideProps = async ({ req, res }) => {
     browserID = sha1(moment().format('YYYY-MM-DD HH:mm:ss'));
     cookies.set('browserID', browserID, { httpOnly: true });
   } else {
-    const upsertUser = await db.visitor.upsert({
+    var isNew = await db.visitor.findFirst({
+      where: {
+        IP: browserID,
+      },
+    });
+
+    if (isNew != null) {
+      var outillog = await db.utillog.findFirst({
+        where: {
+          ID: 1,
+        },
+      });
+      await db.utillog.upsert({
+        where: {
+          ID: 1,
+        },
+        update: {
+          ID: 1,
+          JumlahPengunjung: outillog.JumlahPengunjung + 1
+        },
+        create: {
+          ID: 1,
+          JumlahPengunjung: 1
+        },
+      });
+    }
+    await db.visitor.upsert({
       where: {
         IP: browserID,
       },
@@ -34,7 +60,6 @@ export const getServerSideProps = async ({ req, res }) => {
         Tanggal: Tools.datetimeNow(),
       },
     });
-    console.log(browserID);
   }
 
   return {
