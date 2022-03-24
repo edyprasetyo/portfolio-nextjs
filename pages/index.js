@@ -5,11 +5,14 @@ import moment from 'moment';
 import React from 'react';
 import sha1 from 'sha1';
 import db from '../lib/db';
+import Tools from '../lib/tools';
 import Layout from './layout/layout';
 import About from './subpage/about';
 import Skills from './subpage/skills';
 
+
 export const getServerSideProps = async ({ req, res }) => {
+
   const cookies = new Cookies(req, res)
   var browserID = cookies.get('browserID');
   if (!browserID) {
@@ -23,11 +26,11 @@ export const getServerSideProps = async ({ req, res }) => {
       update: {
         Header1: '',
         Header2: '',
-        Tanggal: moment().toDate(),
+        Tanggal: Tools.datetimeNow(),
       },
       create: {
         IP: browserID,
-        Tanggal: moment().toDate(),
+        Tanggal: Tools.datetimeNow(),
       },
     });
     console.log(browserID);
