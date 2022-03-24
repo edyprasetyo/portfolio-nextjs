@@ -55,3 +55,7 @@ nav .current a:before {
 nav .current a:after {
     max-width: 100%;
 }
+
+.navbar-toggler {
+    background-color: #01e2c5;
+}
