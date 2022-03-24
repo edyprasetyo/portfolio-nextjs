@@ -112,7 +112,7 @@ export default function Home({ browserID }) {
             <div className="col-lg-6 pt-3 img-profile-parent justify-content-center align-self-center">
               <span onClick={showProfile}>
                 <img className="img-fluid img-profile" src="/images/profile_4.png" />
-                <h1 className='text-white'>{browserID}</h1>
+
               </span>
             </div>
             <div className="col-lg-6 pt-5">
