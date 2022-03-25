@@ -58,7 +58,7 @@ function ContactMe() {
                                 onChange={onReCAPTCHAChange}
                             />
                             <div className="mt-3">
-                                <Button className="button" disabled={canSubmit} onClick={showData}>Submit</Button>
+                                <Button type={"submit"} className="button" disabled={canSubmit}>Submit</Button>
                             </div>
 
 
