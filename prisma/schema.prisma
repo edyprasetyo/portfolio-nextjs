@@ -32,7 +32,7 @@ model visitor {
   Tanggal DateTime? @db.DateTime(0)
 }
 
-model question {
+model message {
   ID          Int     @id @default(autoincrement())
   Email       String
   Message     String? @db.VarChar(200)

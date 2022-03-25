@@ -9,11 +9,18 @@ function ContactMe() {
     const [canSubmit, setCanSubmit] = useState(true);
     const recaptchaRef = useRef(null);
 
-    function submitForm(e) {
+    async function submitForm(e) {
         e.preventDefault();
         const data = new FormData(e.target);
-        toast(data.get('email'));
-        console.log(data);
+        toast('testing');
+        fetch('/api/contact-me/submitform', {
+            method: 'post',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ 'email': data.get('email'), 'message': data.get('message'), }),
+        }).then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+            });
     }
 
     function showData() {
@@ -21,10 +28,19 @@ function ContactMe() {
         console.log(captchaToken);
     }
 
-    const onReCAPTCHAChange = (captchaCode) => {
+    const onReCAPTCHAChange = async (captchaCode) => {
         if (!captchaCode) {
             return;
         }
+        const captcha = recaptchaRef.current.getValue();
+        fetch('/api/contact-me/checktoken', {
+            method: 'post',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ 'captcha': captcha }),
+        }).then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+            });
         // recaptchaRef.current.reset();
         setCanSubmit(false);
     }
@@ -44,11 +60,11 @@ function ContactMe() {
                         <Form onSubmit={submitForm}>
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                 <Form.Label className="text-white">Email address</Form.Label>
-                                <Form.Control type="email" placeholder="name@example.com" />
+                                <Form.Control type="email" name="email" placeholder="name@example.com" />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                                 <Form.Label className="text-white">Message</Form.Label>
-                                <Form.Control as="textarea" rows={3} />
+                                <Form.Control name="message" as="textarea" rows={3} />
                             </Form.Group>
 
                             <ReCAPTCHA
