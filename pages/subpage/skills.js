@@ -7,7 +7,6 @@ import "slick-carousel/slick/slick.css";
 
 function Skills() {
 
-
     const [settings, setData] = useState({
         dots: true,
         infinite: true,
