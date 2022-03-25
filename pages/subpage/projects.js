@@ -106,8 +106,7 @@ function Projects() {
                 <div className="divider"></div>
 
                 <div className="h6 text-white text-center mt-4">
-                    There are more projects that i&apos;ve created, to see others please email me
-                    <a href="edyprasetyo151093@gmail.com">edyprasetyo151093@gmail.com</a>
+                    There are more projects that i&apos;ve created, to see others please contact me.
                 </div>
 
             </div>
