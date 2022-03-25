@@ -70,7 +70,7 @@ export const getServerSideProps = async ({ req, res }) => {
   }
 };
 
-export default function Home({ browserID }) {
+export default function Home() {
 
   function showProfile() {
     window.open('https://www.instagram.com/edyprasetyo_', '_blank').focus();
