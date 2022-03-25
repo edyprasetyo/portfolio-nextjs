@@ -28,7 +28,8 @@ function About() {
                             Having more than 6 years as an Full Stack Programmer with history of working
                             in mayor named company, used to building many full stack app (Back End & Front End)
                             using every current programming technology such as
-                            Go Lang(Beego & Gin), Java Script(NextJS - Reactjs), C#(ASP.NET MVC Framework & .Net Core)
+                            Go Lang(Beego & Gin), Java Script(NextJS - ReactJS), Type Script(Angular & ReactJS)
+                            , C#(ASP.NET MVC Framework & .Net Core)
                             , PHP(Laravel), Dart(Flutter), Java(Android), Swift(IOS)
                         </div>
                         <div className="h3 text-blue mb-2">
