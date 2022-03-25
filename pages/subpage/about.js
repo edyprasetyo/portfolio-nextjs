@@ -53,7 +53,7 @@ function About() {
                     </div>
                 </div>
                 <div className='text-center mt-5'>
-                    <span className='unduh-cv' onClick={downloadCV}>Unduh CV</span>
+                    <span className='button' onClick={downloadCV}>Unduh CV</span>
                 </div>
             </div>
         </div>

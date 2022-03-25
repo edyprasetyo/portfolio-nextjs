@@ -3,7 +3,7 @@
     height: auto;
 }
 
-.unduh-cv{
+.button{
     font-weight: 400;
     padding: 8px 15px;
     font-size: 1rem;
@@ -13,7 +13,7 @@
     color: #0ee7b7;
 }
 
-.unduh-cv:hover{
+.button:hover{
     color: rgb(231, 231, 231);
     background: #025f4b;
 }
