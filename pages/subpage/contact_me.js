@@ -1,51 +1,64 @@
 
 import React, { useRef, useState } from "react";
-import { Button, Form } from "react-bootstrap";
 import ReCAPTCHA from "react-google-recaptcha";
-import { toast } from "react-toastify";
+import { useForm } from "react-hook-form";
+import Tools from "../../lib/tools";
+import Loading from "../layout/preloader";
 
 function ContactMe() {
 
+    const { register, handleSubmit, setError, reset, formState: { errors } } = useForm();
+
     const [canSubmit, setCanSubmit] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
+
     const recaptchaRef = useRef(null);
 
-    async function submitForm(e) {
-        e.preventDefault();
-        const data = new FormData(e.target);
-        toast('testing');
-        fetch('/api/contact-me/submitform', {
+    const onSubmit = data => {
+        if (data.Message == 'tes') {
+            setError("Message", { message: "please input valid message" });
+            return;
+        }
+
+        setIsLoading(true);
+        fetch('/api/contact-me/submit-form', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ 'email': data.get('email'), 'message': data.get('message'), }),
+            body: JSON.stringify(data),
         }).then((res) => res.json())
             .then((data) => {
-                console.log(data);
+                setIsLoading(false);
+                if (data.success) {
+                    Tools.showSuccess('Thank you for your message, i will respond as soon as possible');
+                    recaptchaRef.current.reset();
+                    reset()
+                    setCanSubmit(true);
+                }
             });
-    }
+    };
 
-    function showData() {
-        const captchaToken = recaptchaRef.current.getValue();
-        console.log(captchaToken);
-    }
 
     const onReCAPTCHAChange = async (captchaCode) => {
         if (!captchaCode) {
             return;
         }
         const captcha = recaptchaRef.current.getValue();
-        fetch('/api/contact-me/checktoken', {
+        fetch('/api/contact-me/check-token', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ 'captcha': captcha }),
         }).then((res) => res.json())
             .then((data) => {
-                console.log(data);
+                if (data.success) {
+                    setCanSubmit(false);
+                } else {
+                    Tools.showError('Captcha not valid');
+                }
             });
-        // recaptchaRef.current.reset();
-        setCanSubmit(false);
     }
 
-    return (
+    return (<>
+        <Loading isLoading={isLoading}></Loading>
         <div id="contact-me">
             <div style={{ height: 60 }}></div>
             <div className="container">
@@ -53,37 +66,51 @@ function ContactMe() {
                     <strong id="worksSince">#Contact Me</strong>
                 </div>
                 <div className="row mt-5">
-                    <div className="col-lg-6 col-12">
-                        <img className="img-fluid" src="/images/email_me.svg" />
+                    <div className="col-lg-6 col-12 text-center">
+                        <img className="img-fluid img-email-me" src="/images/email_me.svg" />
                     </div>
                     <div className="col-lg-6 col-12">
-                        <Form onSubmit={submitForm}>
-                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                <Form.Label className="text-white">Email address</Form.Label>
-                                <Form.Control type="email" name="email" placeholder="name@example.com" />
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                <Form.Label className="text-white">Message</Form.Label>
-                                <Form.Control name="message" as="textarea" rows={3} />
-                            </Form.Group>
-
-                            <ReCAPTCHA
-                                ref={recaptchaRef}
-                                size="normal"
-                                sitekey="6LcvLQwfAAAAACtJXD-yVvb0MkdGzxTpkP6qB2zI"
-                                onChange={onReCAPTCHAChange}
-                            />
-                            <div className="mt-3">
-                                <Button type={"submit"} className="button" disabled={canSubmit}>Submit</Button>
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                            <div className="row">
+                                <div className="col-lg-8 col-sm-12">
+                                    <label className="form-label text-white">Your Email</label>
+                                    <input {...register("Email", { required: true, maxLength: 200 })}
+                                        type="email" className={"form-control " + (errors.Email && "is-invalid")} />
+                                    {Tools.errorValidation(errors.Email)}
+                                </div>
                             </div>
+                            <div className="row mt-3">
+                                <div className="col-lg-12 col-sm-12">
+                                    <label className="form-label text-white">Message</label>
+                                    <textarea {...register("Message", { required: true, maxLength: 200 })}
+                                        rows={3} className={"form-control " + (errors.Message && "is-invalid")} ></textarea>
+                                    {Tools.errorValidation(errors.Message)}
+                                </div>
+                            </div>
+                            <div className="row mt-4">
+                                <div className="col-12">
+                                    <ReCAPTCHA
+                                        ref={recaptchaRef}
+                                        size="normal"
+                                        sitekey="6LcvLQwfAAAAACtJXD-yVvb0MkdGzxTpkP6qB2zI"
+                                        onChange={onReCAPTCHAChange}
+                                    />
+                                    <div className="mt-3">
+                                        <button type="submit" className="button" disabled={canSubmit}>Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
 
-
-                        </Form>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
+    </>
+
     );
 }
 
 export default ContactMe;
+
+

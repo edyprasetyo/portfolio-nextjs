@@ -34,7 +34,7 @@ model visitor {
 
 model message {
   ID          Int     @id @default(autoincrement())
-  Email       String
-  Message     String? @db.VarChar(200)
+  Email       String? @db.VarChar(200)
+  Message     String? @db.VarChar(500)
   WaktuInput  DateTime? @db.DateTime(0)
 }

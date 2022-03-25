@@ -1,0 +1,11 @@
+.img-email-me {
+    width: 80%;
+}
+
+@media (max-width: 575.98px) {
+    .img-email-me {
+        width: 70%;
+        margin-bottom: 30px;
+    }
+    
+}
