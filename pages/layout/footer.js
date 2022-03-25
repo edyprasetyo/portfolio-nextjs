@@ -13,7 +13,7 @@ export default function Footer() {
     }, [])
 
     return (
-        <div className="pt-5">
+        <div className="mt-5">
             <div className="h6 text-green text-center pt-5 pb-4">
                 <span className="text-white">Visitors :</span> {jumlahPengunjung}
             </div>
