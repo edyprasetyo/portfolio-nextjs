@@ -61,7 +61,7 @@ function Skills() {
                                         <br />
                                         PHP - Laravel
                                         <br />
-                                        Java Script - ReactJS/Angular
+                                        Java Script - NextJS - ReactJS
                                         <br />
                                         Type Script - ReactJS/Angular
                                     </div>
@@ -83,11 +83,11 @@ function Skills() {
                             <div className="row mt-2">
                                 <div className="col-md-12">
                                     <div className="skills-card-content">
+                                        Flutter - VS Code
+                                        <br />
                                         Android(Java/Kotlin) - Android Studio
                                         <br />
                                         IOS(Swift) - Xcode
-                                        <br />
-                                        Flutter - VS Code
                                     </div>
                                 </div>
                             </div>

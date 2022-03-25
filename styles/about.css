@@ -2,3 +2,18 @@
     width: 100%;
     height: auto;
 }
+
+.unduh-cv{
+    font-weight: 400;
+    padding: 8px 15px;
+    font-size: 1rem;
+    border: 1px solid #0ee7b7;
+    border-radius: 8px;
+    cursor:pointer;
+    color: #0ee7b7;
+}
+
+.unduh-cv:hover{
+    color: rgb(231, 231, 231);
+    background: #025f4b;
+}

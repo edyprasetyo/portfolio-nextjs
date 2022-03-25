@@ -3,6 +3,11 @@ import 'aos/dist/aos.css';
 import React, { useEffect } from "react";
 
 function About() {
+
+    function downloadCV() {
+        window.open('/pdf/CV_2022-03-01_Edy_Prasetyo.pdf', '_blank').focus();
+    }
+
     useEffect(() => {
         AOS.init({
             duration: 2000
@@ -46,6 +51,9 @@ function About() {
                             Laude
                         </div>
                     </div>
+                </div>
+                <div className='text-center mt-5'>
+                    <span className='unduh-cv' onClick={downloadCV}>Unduh CV</span>
                 </div>
             </div>
         </div>
