@@ -8,6 +8,7 @@ import db from '../lib/db';
 import Tools from '../lib/tools';
 import Layout from './layout/layout';
 import About from './subpage/about';
+import ContactMe from './subpage/contact_me';
 import Projects from './subpage/projects';
 import Skills from './subpage/skills';
 
@@ -162,6 +163,7 @@ export default function Home() {
       <About></About>
       <Skills></Skills>
       <Projects></Projects>
+      <ContactMe></ContactMe>
     </Layout>
 
   )

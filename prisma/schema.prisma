@@ -31,3 +31,10 @@ model visitor {
   Header2 String?   @db.VarChar(200)
   Tanggal DateTime? @db.DateTime(0)
 }
+
+model question {
+  ID          Int     @id @default(autoincrement())
+  Email       String
+  Message     String? @db.VarChar(200)
+  WaktuInput  DateTime? @db.DateTime(0)
+}

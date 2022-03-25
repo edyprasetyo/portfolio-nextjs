@@ -14,6 +14,7 @@ function Header() {
                         <Nav.Link href="#about-me">About Me</Nav.Link>
                         <Nav.Link href="#skills">Skills</Nav.Link>
                         <Nav.Link href="#latest-projects">Projects</Nav.Link>
+                        <Nav.Link href="#contact-me">Contact Me</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
