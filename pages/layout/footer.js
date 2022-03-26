@@ -1,21 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useSelector } from "react-redux";
+import { selectJumlahPengunjung } from "../../reducers/visitor/visitorSlice";
 
 export default function Footer() {
-
-    const [jumlahPengunjung, setJumlahPengunjung] = useState(0);
-
-    useEffect(() => {
-        fetch('/api/layout/footer')
-            .then((res) => res.json())
-            .then((data) => {
-                setJumlahPengunjung(data.oUtillog.JumlahPengunjung);
-            })
-    }, [])
+    const oSelectJumlahPengunjung = useSelector(selectJumlahPengunjung);
 
     return (
         <div className="mt-5">
             <div className="h6 text-green text-center pt-5 pb-4">
-                <span className="text-white">Visitors :</span> {jumlahPengunjung}
+                <span className="text-white">Visitors :</span> {oSelectJumlahPengunjung.jumlahPengunjung}
             </div>
         </div>
     );

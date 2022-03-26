@@ -2,15 +2,17 @@ import Terminal from '@nitric/react-animated-term';
 import '@nitric/react-animated-term/css/styles.css';
 import Cookies from 'cookies';
 import moment from 'moment';
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import sha1 from 'sha1';
 import db from '../lib/db';
 import Tools from '../lib/tools';
+import About from './../component/about';
+import ContactMe from './../component/contact_me';
+import Projects from './../component/projects';
+import Skills from './../component/skills';
+import { fetchJumlahPengunjung } from './../reducers/visitor/visitorSlice';
 import Layout from './layout/layout';
-import About from './subpage/about';
-import ContactMe from './subpage/contact_me';
-import Projects from './subpage/projects';
-import Skills from './subpage/skills';
 
 
 export const getServerSideProps = async ({ req, res }) => {
@@ -72,6 +74,7 @@ export const getServerSideProps = async ({ req, res }) => {
 };
 
 export default function Home() {
+  const dispatch = useDispatch()
 
   function showProfile() {
     window.open('https://www.instagram.com/edyprasetyo_', '_blank').focus();
@@ -133,6 +136,11 @@ export default function Home() {
 
   ]
 
+  useEffect(() => {
+    dispatch(fetchJumlahPengunjung());
+  });
+
+
   return (
     <Layout>
       <div id="home">
@@ -144,7 +152,6 @@ export default function Home() {
             <div className="col-lg-6 pt-3 img-profile-parent justify-content-center align-self-center">
               <span onClick={showProfile}>
                 <img className="img-fluid img-profile" src="/images/profile_4.png" />
-
               </span>
             </div>
             <div className="col-lg-6 pt-5">

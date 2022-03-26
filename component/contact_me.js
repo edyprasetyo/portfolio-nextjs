@@ -2,8 +2,8 @@
 import React, { useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useForm } from "react-hook-form";
-import Tools from "../../lib/tools";
-import Loading from "../layout/preloader";
+import Tools from "../lib/tools";
+import Loading from "../pages/layout/preloader";
 
 function ContactMe() {
 
