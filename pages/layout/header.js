@@ -1,12 +1,12 @@
+import Image from 'next/image';
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-
 
 function Header() {
     return (
         <Navbar bg="light" expand="lg" className="navbar fixed-top navbar-expand-lg navbar-light">
             <Container>
-                <Navbar.Brand href="#home"><img src="/images/logo.png" className="logo" /></Navbar.Brand>
+                <Navbar.Brand href="#home"><Image src="/images/logo.png" className="logo" alt='app logo' /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">

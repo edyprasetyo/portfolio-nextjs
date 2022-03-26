@@ -2,6 +2,7 @@ import Terminal from '@nitric/react-animated-term';
 import '@nitric/react-animated-term/css/styles.css';
 import Cookies from 'cookies';
 import moment from 'moment';
+import Image from 'next/image';
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import sha1 from 'sha1';
@@ -151,7 +152,7 @@ export default function Home() {
           <div className="row">
             <div className="col-lg-6 pt-3 img-profile-parent justify-content-center align-self-center">
               <span onClick={showProfile}>
-                <img className="img-fluid img-profile" src="/images/profile_4.png" />
+                <Image className="img-fluid img-profile" src="/images/profile_4.png" alt='profile' />
               </span>
             </div>
             <div className="col-lg-6 pt-5">
