@@ -151,7 +151,7 @@ export default function Home() {
           <div className="row">
             <div className="col-lg-6 pt-3 img-profile-parent justify-content-center align-self-center">
               <span onClick={showProfile}>
-                <img className="img-fluid img-profile" src="/images/profile_4.png" alt='profile' />
+                <img className="img-fluid img-profile" src="/images/profile_4.png" alt="profile" />
               </span>
             </div>
             <div className="col-lg-6 pt-5">
