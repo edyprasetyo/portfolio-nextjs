@@ -6,7 +6,6 @@ import Tools from "../lib/tools";
 import Loading from "../pages/layout/preloader";
 
 function ContactMe() {
-
     const { register, handleSubmit, setError, reset, formState: { errors } } = useForm();
 
     const [canSubmit, setCanSubmit] = useState(true);
