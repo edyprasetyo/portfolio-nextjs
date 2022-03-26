@@ -33,7 +33,7 @@ function Skills() {
 
     return (
         <div id='skills'>
-            <div style={{ height: "70px" }}></div>
+            <div style={{ height: 80 }}></div>
             <div className="h1 text-green">
                 <strong id="worksSince">#06</strong>
             </div>

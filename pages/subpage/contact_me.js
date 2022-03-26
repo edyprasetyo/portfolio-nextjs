@@ -60,12 +60,12 @@ function ContactMe() {
     return (<>
         <Loading isLoading={isLoading}></Loading>
         <div id="contact-me">
-            <div style={{ height: 60 }}></div>
+            <div style={{ height: 80 }}></div>
             <div className="container">
                 <div className="h1 text-green">
                     <strong id="worksSince">#Contact Me</strong>
                 </div>
-                <div className="row mt-5">
+                <div className="row mt-5 px-3">
                     <div className="col-lg-6 col-12 text-center">
                         <img className="img-fluid img-email-me" src="/images/email_me.svg" />
                     </div>

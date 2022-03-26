@@ -5,7 +5,7 @@ function Projects() {
 
     return (
         <div id="latest-projects">
-            <div style={{ height: 60 }}></div>
+            <div style={{ height: 80 }}></div>
             <div className="container">
                 <div className="h1 text-green">
                     <strong id="worksSince">#Latest Projects</strong>

@@ -16,7 +16,7 @@ function About() {
     });
     return (
         <div id="about-me">
-            <div style={{ height: "70px" }}></div>
+            <div style={{ height: 80 }}></div>
             <div className="container">
                 <div className="h3 text-green text-center pb-5">
                     About Me
