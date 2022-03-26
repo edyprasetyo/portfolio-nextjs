@@ -108,7 +108,6 @@ function Projects() {
                 <div className="h6 text-white text-center mt-4">
                     There are more projects that i&apos;ve created, to see others please contact me.
                 </div>
-
             </div>
 
         </div>
