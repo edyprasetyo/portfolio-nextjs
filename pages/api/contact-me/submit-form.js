@@ -7,13 +7,17 @@ export default async function handler(req, res) {
     function sendEmailNotification(subject, emailTo, body) {
         let nodemailer = require('nodemailer')
         const transporter = nodemailer.createTransport({
+            host: 'smtp.gmail.com',
             port: 465,
-            host: "smtp.gmail.com",
-            auth: {
-                user: process.env.EMAIL_ADDRESS,
-                pass: process.env.EMAIL_PASSWORD,
-            },
             secure: true,
+            auth: {
+                type: 'OAuth2',
+                user: process.env.EMAIL_USER,
+                clientId: process.env.EMAIL_CLIENT_ID,
+                clientSecret: process.env.EMAIL_CLIENT_SECRET,
+                refreshToken: process.env.EMAIL_REFRESH_TOKEN,
+                accessToken: process.env.EMAIL_ACCESS_TOKEN,
+            }
         })
 
         const mailData = {
