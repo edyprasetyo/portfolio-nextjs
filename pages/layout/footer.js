@@ -1,10 +1,16 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { visitorData } from "../../reducers/visitor/visitorSlice";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchJumlahPengunjung, visitorData } from "../../reducers/visitor/visitorSlice";
 import Loading from "./preloader";
 
 export default function Footer() {
+    const dispatch = useDispatch()
     const oVisitorData = useSelector(visitorData);
+
+    useEffect(() => {
+        dispatch(fetchJumlahPengunjung());
+    }, []);
+
     return (
         <>
             <Loading isLoading={oVisitorData.loading}></Loading>
