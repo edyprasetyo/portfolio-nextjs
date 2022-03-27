@@ -18,7 +18,7 @@ export default async function handler(req, res) {
                 refreshToken: process.env.EMAIL_REFRESH_TOKEN,
                 accessToken: process.env.EMAIL_ACCESS_TOKEN,
             }
-        })
+        });
 
         const mailData = {
             from: 'zlatanptasetyo@gmail.com',
