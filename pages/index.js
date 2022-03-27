@@ -119,7 +119,7 @@ export default function Home() {
       'cmd': false
     },
     {
-      'text': 'C#(ASP.Net Framework/Core), Java, Swift, PHP(Laravel)',
+      'text': 'C#(ASP.Net Framework/Core), PHP(Laravel), Type Script(Angular/ReactJS)',
       'cmd': false
     },
     {
@@ -127,7 +127,7 @@ export default function Home() {
       'cmd': false
     },
     {
-      'text': 'Type Script(Angular/ReactJS), Dart(Flutter)',
+      'text': 'Dart(Flutter), Java/Kotlin(Android Studio), Swift(Xcode)',
       'cmd': false
     },
 
