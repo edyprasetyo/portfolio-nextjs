@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 function About() {
 
     function downloadCV() {
-        window.open('/pdf/CV_2022-03-01_Edy_Prasetyo.pdf', '_blank').focus();
+        window.open('/pdf/CV_Edy_Prasetyo.pdf', '_blank').focus();
     }
 
     useEffect(() => {
