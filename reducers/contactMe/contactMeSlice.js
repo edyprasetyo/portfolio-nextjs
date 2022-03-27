@@ -28,7 +28,7 @@ export const contactMeSlice = createSlice({
 
 export const { showLoading, setSubmitDisabled, checkTokenResponse, submitResponse } = contactMeSlice.actions
 
-export const selectContactMe = (state) => state.contactMe
+export const contactMeData = (state) => state.contactMe
 
 export const submitContactForm = (data) => async dispatch => {
     dispatch(showLoading(true));
@@ -37,8 +37,8 @@ export const submitContactForm = (data) => async dispatch => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
     }).then((res) => res.json())
-        .then((data) => {
-            dispatch(submitResponse(data));
+        .then((resData) => {
+            dispatch(submitResponse(resData));
         });
 }
 

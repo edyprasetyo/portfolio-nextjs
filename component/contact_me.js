@@ -5,13 +5,13 @@ import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import Tools from "../lib/tools";
 import Loading from "../pages/layout/preloader";
-import { checkCapthaToken, selectContactMe, setSubmitDisabled, submitContactForm } from "../reducers/contactMe/contactMeSlice";
+import { checkCapthaToken, contactMeData, setSubmitDisabled, submitContactForm } from "../reducers/contactMe/contactMeSlice";
 
 function ContactMe() {
     const { register, handleSubmit, setError, reset, formState: { errors } } = useForm();
 
     const dispatch = useDispatch()
-    const oselectContactMe = useSelector(selectContactMe);
+    const oContactMeData = useSelector(contactMeData);
 
     const recaptchaRef = useRef(null);
 
@@ -20,17 +20,17 @@ function ContactMe() {
             setError("Message", { message: "please input valid message" });
             return;
         }
-        dispatch(submitContactForm());
+        dispatch(submitContactForm(data));
     };
 
     useEffect(() => {
-        if (oselectContactMe.resSubmit.success) {
+        if (oContactMeData.resSubmit.success) {
             dispatch(setSubmitDisabled(true))
             Tools.showSuccess('Thank you for your message, i will respond as soon as possible');
             recaptchaRef.current.reset();
             reset()
         }
-    }, [oselectContactMe.resSubmit])
+    }, [oContactMeData.resSubmit])
 
     const onReCAPTCHAChange = async (captchaCode) => {
         if (!captchaCode) {
@@ -41,15 +41,15 @@ function ContactMe() {
     }
 
     useEffect(() => {
-        if (oselectContactMe.resToken.success) {
+        if (oContactMeData.resToken.success) {
             dispatch(setSubmitDisabled(false))
         } else {
             dispatch(setSubmitDisabled(true))
         }
-    }, [oselectContactMe.resToken])
+    }, [oContactMeData.resToken])
 
     return (<>
-        <Loading isLoading={oselectContactMe.loading}></Loading>
+        <Loading isLoading={oContactMeData.loading}></Loading>
         <div id="contact-me">
             <div style={{ height: 80 }}></div>
             <div className="container">
@@ -87,7 +87,7 @@ function ContactMe() {
                                         onChange={onReCAPTCHAChange}
                                     />
                                     <div className="mt-3">
-                                        <button type="submit" className="button" disabled={oselectContactMe.submitDisabled}>Submit</button>
+                                        <button type="submit" className="button" disabled={oContactMeData.submitDisabled}>Submit</button>
                                     </div>
                                 </div>
                             </div>
