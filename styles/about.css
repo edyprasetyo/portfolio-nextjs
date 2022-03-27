@@ -20,6 +20,8 @@
 }
 
 .button:disabled{
-    color: rgb(155, 155, 155) !important;
+    color: rgb(109, 109, 109) !important;
     background: #025f4b6c !important;
+    border: 1px solid #025f4b6c !important;
+    cursor: default;
 }
