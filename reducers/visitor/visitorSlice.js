@@ -26,7 +26,7 @@ export const visitorData = (state) => state.visitor
 
 export const fetchJumlahPengunjung = () => async dispatch => {
     dispatch(setLoading(true));
-    fetch('/api/layout/footer')
+    fetch('/api/visitor/getJumlahPengunjung')
         .then((res) => res.json())
         .then((data) => {
             dispatch(setJumlahPengunjung(data.oUtillog.JumlahPengunjung));
