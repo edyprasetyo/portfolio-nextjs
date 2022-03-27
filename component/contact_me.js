@@ -1,15 +1,17 @@
 
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useForm } from "react-hook-form";
+import { useDispatch, useSelector } from "react-redux";
 import Tools from "../lib/tools";
 import Loading from "../pages/layout/preloader";
+import { checkCapthaToken, selectContactMe, setSubmitDisabled, submitContactForm } from "../reducers/contactMe/contactMeSlice";
 
 function ContactMe() {
     const { register, handleSubmit, setError, reset, formState: { errors } } = useForm();
 
-    const [canSubmit, setCanSubmit] = useState(true);
-    const [isLoading, setIsLoading] = useState(false);
+    const dispatch = useDispatch()
+    const oselectContactMe = useSelector(selectContactMe);
 
     const recaptchaRef = useRef(null);
 
@@ -18,46 +20,36 @@ function ContactMe() {
             setError("Message", { message: "please input valid message" });
             return;
         }
-
-        setIsLoading(true);
-        fetch('/api/contact-me/submit-form', {
-            method: 'post',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data),
-        }).then((res) => res.json())
-            .then((data) => {
-                setIsLoading(false);
-                if (data.success) {
-                    Tools.showSuccess('Thank you for your message, i will respond as soon as possible');
-                    recaptchaRef.current.reset();
-                    reset()
-                    setCanSubmit(true);
-                }
-            });
+        dispatch(submitContactForm());
     };
 
+    useEffect(() => {
+        if (oselectContactMe.resSubmit.success) {
+            dispatch(setSubmitDisabled(true))
+            Tools.showSuccess('Thank you for your message, i will respond as soon as possible');
+            recaptchaRef.current.reset();
+            reset()
+        }
+    }, [oselectContactMe.resSubmit])
 
     const onReCAPTCHAChange = async (captchaCode) => {
         if (!captchaCode) {
             return;
         }
         const captcha = recaptchaRef.current.getValue();
-        fetch('/api/contact-me/check-token', {
-            method: 'post',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ 'captcha': captcha }),
-        }).then((res) => res.json())
-            .then((data) => {
-                if (data.success) {
-                    setCanSubmit(false);
-                } else {
-                    Tools.showError('Captcha not valid');
-                }
-            });
+        dispatch(checkCapthaToken(captcha));
     }
 
+    useEffect(() => {
+        if (oselectContactMe.resToken.success) {
+            dispatch(setSubmitDisabled(false))
+        } else {
+            dispatch(setSubmitDisabled(true))
+        }
+    }, [oselectContactMe.resToken])
+
     return (<>
-        <Loading isLoading={isLoading}></Loading>
+        <Loading isLoading={oselectContactMe.loading}></Loading>
         <div id="contact-me">
             <div style={{ height: 80 }}></div>
             <div className="container">
@@ -95,7 +87,7 @@ function ContactMe() {
                                         onChange={onReCAPTCHAChange}
                                     />
                                     <div className="mt-3">
-                                        <button type="submit" className="button" disabled={canSubmit}>Submit</button>
+                                        <button type="submit" className="button" disabled={oselectContactMe.submitDisabled}>Submit</button>
                                     </div>
                                 </div>
                             </div>
