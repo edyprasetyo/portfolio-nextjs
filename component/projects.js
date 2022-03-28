@@ -16,9 +16,6 @@ function Projects() {
                 <div data-aos="fade-up" className="h6 text-white text-center mt-3">
                     Unicorn is an application to booking bus ticket, customers also can access this application by these three
                     platform web,ios, android.
-
-                    For the admin, they have their own panel on a website, so they can control also can see the percentage of
-                    available ticket, fleet, and every branch.
                 </div>
                 <div data-aos="fade-up" className="text-center mt-3 mb-4">
                     <img className="img-unicorn img-fluid" src="/images/unicorn/unicorn.png" />
