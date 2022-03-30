@@ -111,7 +111,7 @@ export default function Home() {
       'cmd': false
     },
     {
-      'text': 'Go Lang(Beego/Gin), Java Script(NextJS-ReactJS)',
+      'text': 'Java Script(NextJS-ReactJS),  C#(ASP.Net Framework/Core)',
       'cmd': false
     },
     {
@@ -119,7 +119,7 @@ export default function Home() {
       'cmd': false
     },
     {
-      'text': 'C#(ASP.Net Framework/Core), PHP(Laravel), Type Script(Angular/ReactJS)',
+      'text': 'PHP(Laravel), Go Lang(Beego/Gin), Type Script(Angular/ReactJS)',
       'cmd': false
     },
     {
@@ -130,7 +130,22 @@ export default function Home() {
       'text': 'Dart(Flutter), Java/Kotlin(Android Studio), Swift(Xcode)',
       'cmd': false
     },
-
+    {
+      'text': '',
+      'cmd': false
+    },
+    {
+      'text': 'Winform(C#/VB.net)',
+      'cmd': false
+    },
+    {
+      'text': '',
+      'cmd': false
+    },
+    {
+      'text': 'Winform(C#/VB.net)',
+      'cmd': false
+    },
   ]
 
 
