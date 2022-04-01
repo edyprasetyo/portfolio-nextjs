@@ -138,14 +138,7 @@ export default function Home() {
       'text': 'Winform(C#/VB.net)',
       'cmd': false
     },
-    {
-      'text': '',
-      'cmd': false
-    },
-    {
-      'text': 'Winform(C#/VB.net)',
-      'cmd': false
-    },
+
   ]
 
 
