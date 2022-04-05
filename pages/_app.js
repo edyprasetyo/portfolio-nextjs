@@ -1,4 +1,5 @@
 
+import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import { Provider } from 'react-redux';
@@ -12,6 +13,9 @@ import '../styles/preloader.css';
 import '../styles/projects.css';
 import '../styles/skills.css';
 import store from './../reducers/store';
+
+axios.defaults.headers.common['Authorization'] = 'AUTH TOKEN';
+axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 function MyApp({ Component, pageProps }) {
   return (<Provider store={store}>

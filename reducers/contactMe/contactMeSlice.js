@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 export const contactMeSlice = createSlice({
     name: 'contactMe',
@@ -32,25 +33,24 @@ export const contactMeData = (state) => state.contactMe
 
 export const submitContactForm = (data) => async dispatch => {
     dispatch(showLoading(true));
-    fetch('/api/contact-me/submit-form', {
-        method: 'post',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-    }).then((res) => res.json())
-        .then((resData) => {
-            dispatch(submitResponse(resData));
+    axios.post('/api/contact-me/submit-form', { data })
+        .then(function (response) {
+            dispatch(submitResponse(response.data));
+        })
+        .catch(function (error) {
+            console.log(error);
         });
+
 }
 
 export const checkCapthaToken = (captcha) => async dispatch => {
     dispatch(showLoading(true));
-    fetch('/api/contact-me/check-token', {
-        method: 'post',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ 'captcha': captcha }),
-    }).then((res) => res.json())
-        .then((data) => {
-            dispatch(checkTokenResponse(data));
+    axios.post('/api/contact-me/check-token', { 'captcha': captcha })
+        .then(function (response) {
+            dispatch(checkTokenResponse(response.data));
+        })
+        .catch(function (error) {
+            console.log(error);
         });
 }
 

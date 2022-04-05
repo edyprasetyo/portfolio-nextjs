@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 export const visitorSlice = createSlice({
     name: 'visitor',
@@ -23,10 +24,12 @@ export const visitorData = (state) => state.visitor
 
 export const fetchJumlahPengunjung = () => async dispatch => {
     dispatch(setLoading(true));
-    fetch('/api/visitor/getJumlahPengunjung')
-        .then((res) => res.json())
-        .then((data) => {
-            dispatch(setJumlahPengunjung(data.oUtillog.JumlahPengunjung));
+    axios.post('/api/visitor/getJumlahPengunjung', {})
+        .then(function (response) {
+            dispatch(setJumlahPengunjung(response.data.oUtillog.JumlahPengunjung));
+        })
+        .catch(function (error) {
+            console.log(error);
         });
 }
 
