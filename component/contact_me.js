@@ -4,8 +4,8 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import Tools from "../lib/tools";
-import Loading from "../pages/layout/preloader";
 import { checkCapthaToken, contactMeData, setSubmitDisabled, submitContactForm } from "../reducers/contactMe/contactMeSlice";
+import Loading from "./layout/preloader";
 
 function ContactMe() {
     const { register, handleSubmit, setError, reset, formState: { errors } } = useForm();
@@ -30,7 +30,7 @@ function ContactMe() {
             recaptchaRef.current.reset();
             reset()
         }
-    }, [oContactMeData.resSubmit])
+    }, [oContactMeData.resSubmit]);
 
     const onReCAPTCHAChange = async (captchaCode) => {
         if (!captchaCode) {
@@ -46,7 +46,7 @@ function ContactMe() {
         } else {
             dispatch(setSubmitDisabled(true))
         }
-    }, [oContactMeData.resToken])
+    }, [oContactMeData.resToken]);
 
     return (<>
         <Loading isLoading={oContactMeData.loading}></Loading>

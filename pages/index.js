@@ -4,13 +4,13 @@ import Cookies from 'cookies';
 import moment from 'moment';
 import React from 'react';
 import sha1 from 'sha1';
+import Layout from '../component/layout/layout';
 import db from '../lib/db';
 import Tools from '../lib/tools';
 import About from './../component/about';
 import ContactMe from './../component/contact_me';
 import Projects from './../component/projects';
 import Skills from './../component/skills';
-import Layout from './layout/layout';
 
 
 export const getServerSideProps = async ({ req, res }) => {
