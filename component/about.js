@@ -46,8 +46,7 @@ function About() {
                             Educational Background
                         </div>
                         <div className="h6 text-white">
-                            Information Technology Gunadarma University Jakarta / From September 2011 to December 2015, Cum
-                            Laude
+                            Information Technology Gunadarma University Jakarta / From September 2011 to December 2015, Bachelor's Degree
                         </div>
                     </div>
                 </div>
