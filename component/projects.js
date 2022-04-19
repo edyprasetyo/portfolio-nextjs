@@ -118,7 +118,6 @@ function Projects() {
                     <img className="img-unicorn img-fluid" src="/images/sipexpress/sipexpress.png" />
                 </div>
 
-
                 <div className="divider"></div>
 
                 <div data-aos="fade-up" className="h3 text-blue text-center mt-4">
