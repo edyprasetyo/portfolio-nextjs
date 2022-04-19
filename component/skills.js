@@ -53,13 +53,13 @@ function Skills() {
                             <div className="row mt-2">
                                 <div className="col-md-12">
                                     <div className="skills-card-content">
-                                        Go Lang - Beego/Gin
+                                        Java Script - NextJS - ReactJS
                                         <br />
                                         C# - ASP.Net MVC/ASP.Net Core
                                         <br />
                                         PHP - Laravel
                                         <br />
-                                        Java Script - NextJS - ReactJS
+                                        Go Lang - Beego/Gin
                                         <br />
                                         Type Script - ReactJS/Angular
                                     </div>
