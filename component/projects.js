@@ -23,6 +23,27 @@ function Projects() {
         window.open("https://developer.indorent.co.id/development/expressplusdev/login/autologin");
     }
 
+    function gotoSipExpressKurirPage() {
+        window.open("https://play.google.com/store/apps/details?id=com.csm.expresspluskurir");
+    }
+
+    function gotoCSMWebPage() {
+        window.open("https://developer.indorent.co.id/development/csmweb");
+    }
+
+    function gotoIndorentWebPage() {
+        window.open("https://developer.indorent.co.id/development/indorentweb");
+    }
+
+    function gotoRecruitmentPage() {
+        window.open("https://developer.indorent.co.id/DEVELOPMENT/RecruitmentOnlineDev/admin");
+    }
+
+    function gotoMRBSPage() {
+        window.open("https://developer.indorent.co.id/DEVELOPMENT/MRBSDev/login/autologin");
+    }
+
+
     return (
         <div id="latest-projects">
             <div style={{ height: 80 }}></div>
@@ -139,30 +160,95 @@ function Projects() {
                         <div className="h5 text-white text-center mt-3">
                             Picking Up / Delivering Parcels And Packages To Customers(Android, IOS)
                         </div>
-                        <div className="visit-page text-center mt-3" onClick={gotoSipExpressPlusPage}>
+                        <div className="visit-page text-center mt-3" onClick={gotoSipExpressKurirPage}>
                             Visit Page
                         </div>
                     </div>
                     <div className="col-lg-6 col-12 div-img-unicorn">
                         <img className="img-unicorn img-fluid" src="/images/sipexpresskurir/sipexpresskurir.png" />
-                        <button type="submit" className="button btn-visit-page" onClick={gotoSipExpressPlusPage}>Visit Page</button>
+                        <button type="submit" className="button btn-visit-page" onClick={gotoSipExpressKurirPage}>Visit Page</button>
                     </div>
                 </div>
 
                 <div className="divider"></div>
 
-                <div data-aos="fade-up" className="h3 text-blue text-center mt-4">
-                    Inline
-                </div>
-                <div data-aos="fade-up" className="h6 text-white text-center mt-3">
-                    Inline is a mobile application platform to booking a vehicle, this application could be use for partnership
-                    company with indorent
-                </div>
-                <div data-aos="fade-up" className="text-center mt-3 mb-4">
-                    <img className="img-unicorn img-fluid" src="/images/inline/inline.png" />
+                <div className="row mt-4">
+                    <div className="col-lg-6 col-12 align-self-center align-content-center justify-content-center">
+                        <div className="h3 text-green text-center">
+                            CSM Group
+                        </div>
+                        <div className="h5 text-white text-center mt-3">
+                            Company CSM Group Website
+                        </div>
+                        <div className="visit-page text-center mt-3" onClick={gotoCSMWebPage}>
+                            Visit Page
+                        </div>
+                    </div>
+                    <div className="col-lg-6 col-12 div-img-unicorn">
+                        <img className="img-unicorn img-fluid" src="/images/csmweb/csmweb.png" />
+                        <button type="submit" className="button btn-visit-page" onClick={gotoCSMWebPage}>Visit Page</button>
+                    </div>
                 </div>
 
                 <div className="divider"></div>
+
+                <div className="row mt-4">
+                    <div className="col-lg-6 col-12 align-self-center align-content-center justify-content-center">
+                        <div className="h3 text-green text-center">
+                            Indorent Website
+                        </div>
+                        <div className="h5 text-white text-center mt-3">
+                            Indorent Company Profile Website
+                        </div>
+                        <div className="visit-page text-center mt-3" onClick={gotoIndorentWebPage}>
+                            Visit Page
+                        </div>
+                    </div>
+                    <div className="col-lg-6 col-12 div-img-unicorn">
+                        <img className="img-unicorn img-fluid" src="/images/indorentweb/indorentweb.png" />
+                        <button type="submit" className="button btn-visit-page" onClick={gotoIndorentWebPage}>Visit Page</button>
+                    </div>
+                </div>
+
+                <div className="divider"></div>
+
+                <div className="row mt-4">
+                    <div className="col-lg-6 col-12 align-self-center align-content-center justify-content-center">
+                        <div className="h3 text-green text-center">
+                            Recruitment Online
+                        </div>
+                        <div className="h5 text-white text-center mt-3">
+                            E-Recruitment For Hiring And Tracking Progress of a New Employee
+                        </div>
+                        <div className="visit-page text-center mt-3" onClick={gotoRecruitmentPage}>
+                            Visit Page
+                        </div>
+                    </div>
+                    <div className="col-lg-6 col-12 div-img-unicorn">
+                        <img className="img-unicorn img-fluid" src="/images/recruitment/recruitment.png" />
+                        <button type="submit" className="button btn-visit-page" onClick={gotoRecruitmentPage}>Visit Page</button>
+                    </div>
+                </div>
+
+                <div className="divider"></div>
+
+                <div className="row mt-4">
+                    <div className="col-lg-6 col-12 align-self-center align-content-center justify-content-center">
+                        <div className="h3 text-green text-center">
+                            Meeting Room Booking
+                        </div>
+                        <div className="h5 text-white text-center mt-3">
+                            Book a Meeting Room Online
+                        </div>
+                        <div className="visit-page text-center mt-3" onClick={gotoMRBSPage}>
+                            Visit Page
+                        </div>
+                    </div>
+                    <div className="col-lg-6 col-12 div-img-unicorn">
+                        <img className="img-unicorn img-fluid" src="/images/meetingroom/meetingroom.png" />
+                        <button type="submit" className="button btn-visit-page" onClick={gotoMRBSPage}>Visit Page</button>
+                    </div>
+                </div>
 
                 <div className="h6 text-white text-center mt-4">
                     There are more projects that i&apos;ve created, to see others please contact me.
