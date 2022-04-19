@@ -3,6 +3,22 @@ import React from "react";
 
 function Projects() {
 
+    function gotoUnicornPage() {
+        window.open("https://developer.indorent.co.id/development/unicorn");
+    }
+
+    function gotoUnicornAdminPage() {
+        window.open("https://developer.indorent.co.id/development/unicorn/adminlogin/autologin");
+    }
+
+    function gotoElitePage() {
+        window.open("https://developer.indorent.co.id/development/elite");
+    }
+
+    function gotoEliteAdminPage() {
+        window.open("https://developer.indorent.co.id/development/elite/adminlogin/autologin");
+    }
+
     return (
         <div id="latest-projects">
             <div style={{ height: 80 }}></div>
@@ -10,55 +26,83 @@ function Projects() {
                 <div className="h1 text-green">
                     <strong id="worksSince">#Latest Projects</strong>
                 </div>
-                <div data-aos="fade-up" className="h3 text-blue text-center mt-4">
-                    Unicorn
-                </div>
-                <div data-aos="fade-up" className="h6 text-white text-center mt-3">
-                    Unicorn is an application to booking bus ticket, customers also can access this application by these three
-                    platform web,ios, android.
-                </div>
-                <div data-aos="fade-up" className="text-center mt-3 mb-4">
-                    <img className="img-unicorn img-fluid" src="/images/unicorn/unicorn.png" />
+
+                <div className="row">
+                    <div className="col-lg-6 col-12 align-self-center align-content-center justify-content-center">
+                        <div className="h3 text-green text-center">
+                            Unicorn
+                        </div>
+                        <div className="h5 text-white text-center mt-3">
+                            Book Bus Ticket Online(Website, Android, IOS)
+                        </div>
+                        <div className="visit-page text-center mt-3" onClick={gotoUnicornPage}>
+                            Visit Page
+                        </div>
+                    </div>
+                    <div className="col-lg-6 col-12 div-img-unicorn">
+                        <img className="img-unicorn img-fluid" src="/images/unicorn/unicorn.png" />
+                        <button type="submit" className="button btn-visit-page" onClick={gotoUnicornPage}>Visit Page</button>
+                    </div>
                 </div>
 
                 <div className="divider"></div>
 
-                <div data-aos="fade-up" className="h3 text-blue text-center mt-4">
-                    Unicorn Admin Panel
-                </div>
-                <div data-aos="fade-up" className="h6 text-white text-center mt-3">
-                    For the admin, they have their own panel on a website, so they can control also can see the percentage of
-                    available ticket, fleet, and every branch.
-                </div>
-
-                <div data-aos="fade-up" className="text-center mt-3 mb-4">
-                    <img className="img-unicorn img-fluid" src="/images/unicorn/unicorn_admin.png" />
-                </div>
-
-                <div className="divider"></div>
-
-                <div data-aos="fade-up" className="h3 text-blue text-center mt-4">
-                    Elite Car Rental
-                </div>
-                <div data-aos="fade-up" className="h6 text-white text-center mt-3">
-                    Elite car rental is a website to rent several kind of vehicle, customers could access this apps wheter using
-                    android or ios devices
-                </div>
-                <div data-aos="fade-up" className="text-center mt-3 mb-4">
-                    <img className="img-unicorn img-fluid" src="/images/elite/elite.png" />
+                <div className="row">
+                    <div className="col-lg-6 col-12 align-self-center align-content-center justify-content-center">
+                        <div className="h3 text-green text-center">
+                            Unicorn Admin Panel
+                        </div>
+                        <div className="h5 text-white text-center mt-3">
+                            Book Bus Ticket Online Admin Panel(Website)
+                        </div>
+                        <div className="visit-page text-center mt-3" onClick={gotoUnicornAdminPage}>
+                            Visit Page
+                        </div>
+                    </div>
+                    <div className="col-lg-6 col-12 div-img-unicorn">
+                        <img className="img-unicorn img-fluid" src="/images/unicorn/unicorn_admin.png" />
+                        <button type="submit" className="button btn-visit-page" onClick={gotoUnicornAdminPage}>Visit Page</button>
+                    </div>
                 </div>
 
                 <div className="divider"></div>
 
-                <div data-aos="fade-up" className="h3 text-blue text-center mt-4">
-                    Elite Car Rental Admin Panel
-                </div>
-                <div data-aos="fade-up" className="h6 text-white text-center mt-3">
-                    For the admin, they have their own panel on a website, so they can monitor all incoming vehicle orders, etc.
+                <div className="row">
+                    <div className="col-lg-6 col-12 align-self-center align-content-center justify-content-center">
+                        <div className="h3 text-green text-center">
+                            Elite Car Rental
+                        </div>
+                        <div className="h5 text-white text-center mt-3">
+                            Car Rental Online And Airport Transfer(Website, Android, IOS)
+                        </div>
+                        <div className="visit-page text-center mt-3" onClick={gotoElitePage}>
+                            Visit Page
+                        </div>
+                    </div>
+                    <div className="col-lg-6 col-12 div-img-unicorn">
+                        <img className="img-unicorn img-fluid" src="/images/elite/elite.png" />
+                        <button type="submit" className="button btn-visit-page" onClick={gotoElitePage}>Visit Page</button>
+                    </div>
                 </div>
 
-                <div data-aos="fade-up" className="text-center mt-3 mb-4">
-                    <img className="img-unicorn img-fluid" src="/images/elite/elite_admin.png" />
+                <div className="divider"></div>
+
+                <div className="row">
+                    <div className="col-lg-6 col-12 align-self-center align-content-center justify-content-center">
+                        <div className="h3 text-green text-center">
+                            Elite Car Rental Admin Panel
+                        </div>
+                        <div className="h5 text-white text-center mt-3">
+                            Car Rental Online And Airport Transfer Admin Panel(Website)
+                        </div>
+                        <div className="visit-page text-center mt-3" onClick={gotoEliteAdminPage}>
+                            Visit Page
+                        </div>
+                    </div>
+                    <div className="col-lg-6 col-12 div-img-unicorn">
+                        <img className="img-unicorn img-fluid" src="/images/elite/elite_admin.png" />
+                        <button type="submit" className="button btn-visit-page" onClick={gotoEliteAdminPage}>Visit Page</button>
+                    </div>
                 </div>
 
                 <div className="divider"></div>

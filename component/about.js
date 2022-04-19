@@ -51,7 +51,7 @@ function About() {
                     </div>
                 </div>
                 <div className='text-center mt-5'>
-                    <span className='button' onClick={downloadCV}>Download CV</span>
+                    <span className='button' onClick={downloadCV}>Download Resume</span>
                 </div>
             </div>
         </div>
