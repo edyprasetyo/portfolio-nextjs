@@ -178,7 +178,7 @@ function Projects() {
                             CSM Group
                         </div>
                         <div className="h5 text-white text-center mt-3">
-                            Company CSM Group Website
+                            CSM Group Company Website
                         </div>
                         <div className="visit-page text-center mt-3" onClick={gotoCSMWebPage}>
                             Visit Page
