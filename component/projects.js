@@ -43,6 +43,12 @@ function Projects() {
         window.open("https://developer.indorent.co.id/DEVELOPMENT/MRBSDev/login/autologin");
     }
 
+    function gotoCSSPage() {
+        window.open("https://developer.indorent.co.id/development/SurveyCustomer/?param=1758beffbf835528b769a512759251ac236760d5");
+    }
+
+
+
 
     return (
         <div id="latest-projects">
@@ -227,6 +233,26 @@ function Projects() {
                     <div className="col-lg-6 col-12 div-img-unicorn">
                         <img className="img-unicorn img-fluid" src="/images/recruitment/recruitment.png" />
                         <button type="submit" className="button btn-visit-page" onClick={gotoRecruitmentPage}>Visit Page</button>
+                    </div>
+                </div>
+
+                <div className="divider"></div>
+
+                <div className="row mt-4">
+                    <div className="col-lg-6 col-12 align-self-center align-content-center justify-content-center">
+                        <div className="h3 text-green text-center">
+                            Customer Survey
+                        </div>
+                        <div className="h5 text-white text-center mt-3">
+                            Collecting Customer Feedback to Improve Customer Service
+                        </div>
+                        <div className="visit-page text-center mt-3" onClick={gotoCSSPage}>
+                            Visit Page
+                        </div>
+                    </div>
+                    <div className="col-lg-6 col-12 div-img-unicorn">
+                        <img className="img-unicorn img-fluid" src="/images/survey/survey.png" />
+                        <button type="submit" className="button btn-visit-page" onClick={gotoCSSPage}>Visit Page</button>
                     </div>
                 </div>
 
