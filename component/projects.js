@@ -12,7 +12,7 @@ function Projects() {
     }
 
     function gotoElitePage() {
-        window.open("https://developer.indorent.co.id/development/elite");
+        window.open("https://developer.indorent.co.id/development/elite/login/autologin");
     }
 
     function gotoEliteAdminPage() {
