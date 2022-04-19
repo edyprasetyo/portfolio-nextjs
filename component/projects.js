@@ -19,6 +19,10 @@ function Projects() {
         window.open("https://developer.indorent.co.id/development/elite/adminlogin/autologin");
     }
 
+    function gotoSipExpressPlusPage() {
+        window.open("https://developer.indorent.co.id/development/expressplusdev/login/autologin");
+    }
+
     return (
         <div id="latest-projects">
             <div style={{ height: 80 }}></div>
@@ -107,15 +111,22 @@ function Projects() {
 
                 <div className="divider"></div>
 
-                <div data-aos="fade-up" className="h3 text-blue text-center mt-4">
-                    SIP Express
-                </div>
-                <div data-aos="fade-up" className="h6 text-white text-center mt-3">
-                    Sip express is a website to tracking delivery goods like document or etc based on shipped number which
-                    received by customers
-                </div>
-                <div data-aos="fade-up" className="text-center mt-3 mb-4">
-                    <img className="img-unicorn img-fluid" src="/images/sipexpress/sipexpress.png" />
+                <div className="row mt-4">
+                    <div className="col-lg-6 col-12 align-self-center align-content-center justify-content-center">
+                        <div className="h3 text-green text-center">
+                            SIP Express
+                        </div>
+                        <div className="h5 text-white text-center mt-3">
+                            Order Shipping / Tracking Parcels And Packages(Website)
+                        </div>
+                        <div className="visit-page text-center mt-3" onClick={gotoSipExpressPlusPage}>
+                            Visit Page
+                        </div>
+                    </div>
+                    <div className="col-lg-6 col-12 div-img-unicorn">
+                        <img className="img-unicorn img-fluid" src="/images/sipexpress/sipexpress.png" />
+                        <button type="submit" className="button btn-visit-page" onClick={gotoSipExpressPlusPage}>Visit Page</button>
+                    </div>
                 </div>
 
                 <div className="divider"></div>
