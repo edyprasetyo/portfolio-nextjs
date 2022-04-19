@@ -47,7 +47,9 @@ function Projects() {
         window.open("https://developer.indorent.co.id/development/SurveyCustomer/?param=1758beffbf835528b769a512759251ac236760d5");
     }
 
-
+    function gotoVMTPage() {
+        window.open("https://developer.indorent.co.id/DEVELOPMENT/VehicleMaintenanceTrackerDev/Login/autologin");
+    }
 
 
     return (
@@ -275,6 +277,28 @@ function Projects() {
                         <button type="submit" className="button btn-visit-page" onClick={gotoMRBSPage}>Visit Page</button>
                     </div>
                 </div>
+
+                <div className="divider"></div>
+
+                <div className="row mt-4">
+                    <div className="col-lg-6 col-12 align-self-center align-content-center justify-content-center">
+                        <div className="h3 text-green text-center">
+                            Vehicle Maintenance Tracker
+                        </div>
+                        <div className="h5 text-white text-center mt-3">
+                            Helping Customers Keeping Records For All of Their Vehicles' Historical Maintenance
+                        </div>
+                        <div className="visit-page text-center mt-3" onClick={gotoVMTPage}>
+                            Visit Page
+                        </div>
+                    </div>
+                    <div className="col-lg-6 col-12 div-img-unicorn">
+                        <img className="img-unicorn img-fluid" src="/images/vmt/vmt.png" />
+                        <button type="submit" className="button btn-visit-page" onClick={gotoVMTPage}>Visit Page</button>
+                    </div>
+                </div>
+
+                <div className="divider"></div>
 
                 <div className="h6 text-white text-center mt-4">
                     There are more projects that i&apos;ve created, to see others please contact me.
