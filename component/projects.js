@@ -27,7 +27,7 @@ function Projects() {
                     <strong id="worksSince">#Latest Projects</strong>
                 </div>
 
-                <div className="row">
+                <div className="row mt-4">
                     <div className="col-lg-6 col-12 align-self-center align-content-center justify-content-center">
                         <div className="h3 text-green text-center">
                             Unicorn
@@ -47,7 +47,7 @@ function Projects() {
 
                 <div className="divider"></div>
 
-                <div className="row">
+                <div className="row mt-4">
                     <div className="col-lg-6 col-12 align-self-center align-content-center justify-content-center">
                         <div className="h3 text-green text-center">
                             Unicorn Admin Panel
@@ -67,7 +67,7 @@ function Projects() {
 
                 <div className="divider"></div>
 
-                <div className="row">
+                <div className="row mt-4">
                     <div className="col-lg-6 col-12 align-self-center align-content-center justify-content-center">
                         <div className="h3 text-green text-center">
                             Elite Car Rental
@@ -87,7 +87,7 @@ function Projects() {
 
                 <div className="divider"></div>
 
-                <div className="row">
+                <div className="row mt-4">
                     <div className="col-lg-6 col-12 align-self-center align-content-center justify-content-center">
                         <div className="h3 text-green text-center">
                             Elite Car Rental Admin Panel
