@@ -131,14 +131,22 @@ function Projects() {
 
                 <div className="divider"></div>
 
-                <div data-aos="fade-up" className="h3 text-blue text-center mt-4">
-                    SIP Express Kurir
-                </div>
-                <div data-aos="fade-up" className="h6 text-white text-center mt-3">
-                    Sip express courier is a mobile apps for courrier when they send the goods to the customers
-                </div>
-                <div data-aos="fade-up" className="text-center mt-3 mb-4">
-                    <img className="img-unicorn img-fluid" src="/images/sipexpresskurir/sipexpresskurir.png" />
+                <div className="row mt-4">
+                    <div className="col-lg-6 col-12 align-self-center align-content-center justify-content-center">
+                        <div className="h3 text-green text-center">
+                            SIP Express Kurir
+                        </div>
+                        <div className="h5 text-white text-center mt-3">
+                            Picking Up / Delivering Parcels And Packages To Customers(Android, IOS)
+                        </div>
+                        <div className="visit-page text-center mt-3" onClick={gotoSipExpressPlusPage}>
+                            Visit Page
+                        </div>
+                    </div>
+                    <div className="col-lg-6 col-12 div-img-unicorn">
+                        <img className="img-unicorn img-fluid" src="/images/sipexpresskurir/sipexpresskurir.png" />
+                        <button type="submit" className="button btn-visit-page" onClick={gotoSipExpressPlusPage}>Visit Page</button>
+                    </div>
                 </div>
 
                 <div className="divider"></div>
