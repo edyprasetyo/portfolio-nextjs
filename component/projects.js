@@ -3,6 +3,10 @@ import React from "react";
 
 function Projects() {
 
+    function downloadUnicornAPK() {
+        window.open('/apk/unicorn_debug.apk', '_blank').focus();
+    }
+
     function gotoUnicornPage() {
         window.open("https://developer.indorent.co.id/development/unicorn");
     }
@@ -70,6 +74,9 @@ function Projects() {
                         </div>
                         <div className="text-center mt-3">
                             <span className="visit-page" onClick={gotoUnicornPage}>Visit Page</span>
+                        </div>
+                        <div className="text-center mt-1">
+                            <span className="visit-page" onClick={downloadUnicornAPK}>Download APK</span>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12 div-img-unicorn">
