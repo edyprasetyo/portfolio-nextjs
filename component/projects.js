@@ -68,8 +68,8 @@ function Projects() {
                         <div className="h5 text-white text-center mt-3">
                             Book Bus Ticket Online(Website, Android, IOS)
                         </div>
-                        <div className="visit-page text-center mt-3" onClick={gotoUnicornPage}>
-                            Visit Page
+                        <div className="text-center mt-3">
+                            <span className="visit-page" onClick={gotoUnicornPage}>Visit Page</span>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12 div-img-unicorn">
@@ -88,8 +88,8 @@ function Projects() {
                         <div className="h5 text-white text-center mt-3">
                             Book Bus Ticket Online Admin Panel(Website)
                         </div>
-                        <div className="visit-page text-center mt-3" onClick={gotoUnicornAdminPage}>
-                            Visit Page
+                        <div className="text-center mt-3">
+                            <span className="visit-page" onClick={gotoUnicornAdminPage}>Visit Page</span>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12 div-img-unicorn">
@@ -108,8 +108,8 @@ function Projects() {
                         <div className="h5 text-white text-center mt-3">
                             Car Rental Online And Airport Transfer(Website, Android, IOS)
                         </div>
-                        <div className="visit-page text-center mt-3" onClick={gotoElitePage}>
-                            Visit Page
+                        <div className="text-center mt-3">
+                            <span className="visit-page" onClick={gotoElitePage}>Visit Page</span>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12 div-img-unicorn">
@@ -128,8 +128,8 @@ function Projects() {
                         <div className="h5 text-white text-center mt-3">
                             Car Rental Online And Airport Transfer Admin Panel(Website)
                         </div>
-                        <div className="visit-page text-center mt-3" onClick={gotoEliteAdminPage}>
-                            Visit Page
+                        <div className="text-center mt-3">
+                            <span className="visit-page" onClick={gotoEliteAdminPage}>Visit Page</span>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12 div-img-unicorn">
@@ -148,8 +148,8 @@ function Projects() {
                         <div className="h5 text-white text-center mt-3">
                             Order Shipping / Tracking Parcels And Packages(Website)
                         </div>
-                        <div className="visit-page text-center mt-3" onClick={gotoSipExpressPlusPage}>
-                            Visit Page
+                        <div className="text-center mt-3">
+                            <span className="visit-page" onClick={gotoSipExpressPlusPage}>Visit Page</span>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12 div-img-unicorn">
@@ -168,8 +168,8 @@ function Projects() {
                         <div className="h5 text-white text-center mt-3">
                             Picking Up / Delivering Parcels And Packages To Customers(Android, IOS)
                         </div>
-                        <div className="visit-page text-center mt-3" onClick={gotoSipExpressKurirPage}>
-                            Visit Page
+                        <div className="text-center mt-3">
+                            <span className="visit-page" onClick={gotoSipExpressKurirPage}>Visit Page</span>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12 div-img-unicorn">
@@ -188,8 +188,8 @@ function Projects() {
                         <div className="h5 text-white text-center mt-3">
                             CSM Group Company Website
                         </div>
-                        <div className="visit-page text-center mt-3" onClick={gotoCSMWebPage}>
-                            Visit Page
+                        <div className="text-center mt-3">
+                            <span className="visit-page" onClick={gotoCSMWebPage}>Visit Page</span>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12 div-img-unicorn">
@@ -208,8 +208,8 @@ function Projects() {
                         <div className="h5 text-white text-center mt-3">
                             Indorent Company Profile Website
                         </div>
-                        <div className="visit-page text-center mt-3" onClick={gotoIndorentWebPage}>
-                            Visit Page
+                        <div className="text-center mt-3">
+                            <span className="visit-page" onClick={gotoIndorentWebPage}>Visit Page</span>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12 div-img-unicorn">
@@ -228,8 +228,8 @@ function Projects() {
                         <div className="h5 text-white text-center mt-3">
                             E-Recruitment For Hiring And Tracking Progress of a New Employee
                         </div>
-                        <div className="visit-page text-center mt-3" onClick={gotoRecruitmentPage}>
-                            Visit Page
+                        <div className="text-center mt-3">
+                            <span className="visit-page" onClick={gotoRecruitmentPage}>Visit Page</span>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12 div-img-unicorn">
@@ -248,8 +248,8 @@ function Projects() {
                         <div className="h5 text-white text-center mt-3">
                             Collecting Customer Feedback to Improve Customer Service
                         </div>
-                        <div className="visit-page text-center mt-3" onClick={gotoCSSPage}>
-                            Visit Page
+                        <div className="text-center mt-3">
+                            <span className="visit-page" onClick={gotoCSSPage}>Visit Page</span>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12 div-img-unicorn">
@@ -268,8 +268,8 @@ function Projects() {
                         <div className="h5 text-white text-center mt-3">
                             Book a Meeting Room Online
                         </div>
-                        <div className="visit-page text-center mt-3" onClick={gotoMRBSPage}>
-                            Visit Page
+                        <div className="text-center mt-3">
+                            <span className="visit-page" onClick={gotoMRBSPage}>Visit Page</span>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12 div-img-unicorn">
@@ -288,8 +288,8 @@ function Projects() {
                         <div className="h5 text-white text-center mt-3">
                             Helping Customers Keeping Records For All of Their Vehicles' Historical Maintenance
                         </div>
-                        <div className="visit-page text-center mt-3" onClick={gotoVMTPage}>
-                            Visit Page
+                        <div className="text-center mt-3">
+                            <span className="visit-page" onClick={gotoVMTPage}>Visit Page</span>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12 div-img-unicorn">
