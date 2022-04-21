@@ -4,7 +4,11 @@ import React from "react";
 function Projects() {
 
     function downloadUnicornAPK() {
-        window.open('/apk/unicorn_debug.apk', '_blank').focus();
+        window.open('/apk/unicorn_demo.apk', '_blank').focus();
+    }
+
+    function downloadUnicornCrewAPK() {
+        window.open('/apk/unicorn_crew_demo.apk', '_blank').focus();
     }
 
     function gotoUnicornPage() {
@@ -82,6 +86,35 @@ function Projects() {
                     <div className="col-lg-6 col-12 div-img-unicorn">
                         <img className="img-unicorn img-fluid" src="/images/unicorn/unicorn.png" />
                         <button type="submit" className="button btn-visit-page" onClick={gotoUnicornPage}>Visit Page</button>
+                    </div>
+                </div>
+
+                <div className="divider"></div>
+
+                <div className="row mt-4">
+                    <div className="col-lg-6 col-12 align-self-center align-content-center justify-content-center">
+                        <div className="h3 text-green text-center">
+                            Unicorn Crew
+                        </div>
+                        <div className="h5 text-white text-center mt-3">
+                            Checking In/Out Passengers, Bus Manifest, Trip Schedule and Ordering Restaurant Menu(Android, IOS)
+                        </div>
+                        <div className="text-center text-white mt-3">
+                            <div>
+                                User ID : edy
+                            </div>
+
+                            <div>
+                                Password : 123
+                            </div>
+                        </div>
+                        <div className="text-center mt-3">
+                            <span className="visit-page" onClick={downloadUnicornCrewAPK}>Download APK</span>
+                        </div>
+                    </div>
+                    <div className="col-lg-6 col-12 div-img-unicorn">
+                        <img className="img-unicorn img-fluid" src="/images/unicorncrew/unicorncrew.png" />
+                        <button type="submit" className="button btn-visit-page" onClick={downloadUnicornCrewAPK}>Download APK</button>
                     </div>
                 </div>
 
