@@ -53,9 +53,9 @@ function Skills() {
                             <div className="row mt-2">
                                 <div className="col-md-12">
                                     <div className="skills-card-content">
-                                        Java Script - NextJS - ReactJS
-                                        <br />
                                         C# - ASP.Net MVC/ASP.Net Core
+                                        <br />
+                                        Java Script - NextJS - ReactJS
                                         <br />
                                         PHP - Laravel
                                         <br />

@@ -27,13 +27,12 @@ function About() {
                     </div>
                     <div data-aos="fade-up" className="col-lg-6 justify-content-center align-self-center pt-3 pb-3">
                         <div className="h3 text-blue mb-2">
-                            Full Stack Programmer
+                            Full Stack & Mobile Application Developer
                         </div>
                         <div className="h6 text-white mb-4">
-                            Having more than 6 years as an Full Stack Programmer with history of working
-                            in mayor named company, used to building many full stack app (Back End & Front End)
-                            using every current programming technology such as Java Script(NextJS - ReactJS)
-                            , C#(ASP.NET MVC Framework & .Net Core), Go Lang(Beego & Gin)
+                            Having more than 6 years as a Full Stack & Mobile Application Developer, used to building many full stack & mobile app (Back End & Front End)
+                            using every current programming technology such as C#(ASP.NET MVC Framework & .Net Core)
+                            , Java Script(NextJS - ReactJS), Go Lang(Beego & Gin)
                             , Type Script(Angular & ReactJS), PHP(Laravel), Dart(Flutter), Java(Android), Swift(IOS)
                         </div>
                         <div className="h3 text-blue mb-2">

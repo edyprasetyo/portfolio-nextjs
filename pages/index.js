@@ -95,7 +95,7 @@ export default function Home() {
       'cmd': true
     },
     {
-      'text': 'RnD Programmer Supervisor(Full Stack & Mobile Developer)',
+      'text': 'Full Stack & Mobile Application Developer',
       'cmd': false
     },
     {
@@ -111,7 +111,7 @@ export default function Home() {
       'cmd': false
     },
     {
-      'text': 'Java Script(NextJS-ReactJS),  C#(ASP.Net Framework/Core)',
+      'text': 'C#(ASP.Net Framework & Core), Java Script(NextJS-ReactJS)',
       'cmd': false
     },
     {
@@ -119,7 +119,7 @@ export default function Home() {
       'cmd': false
     },
     {
-      'text': 'PHP(Laravel), Go Lang(Beego/Gin), Type Script(Angular/ReactJS)',
+      'text': 'PHP(Laravel), Go Lang(Beego & Gin), Type Script(Angular & ReactJS)',
       'cmd': false
     },
     {
@@ -138,10 +138,7 @@ export default function Home() {
       'text': 'Winform(C#/VB.net)',
       'cmd': false
     },
-
   ]
-
-
 
   return (
     <Layout>
