@@ -30,10 +30,10 @@ function About() {
                             Full Stack & Mobile Application Developer
                         </div>
                         <div className="h6 text-white mb-4">
-                            Having more than 6 years as a Full Stack & Mobile Application Developer, used to building many full stack & mobile app (Back End & Front End)
-                            using every current programming technology such as C#(ASP.NET MVC Framework & .Net Core)
-                            , Java Script(NextJS - ReactJS), Go Lang(Beego & Gin)
-                            , Type Script(Angular & ReactJS), PHP(Laravel), Dart(Flutter), Java(Android), Swift(IOS)
+                            Having more than 6 years as a Full Stack & Mobile Application Developer
+                            , used to building many full stack & mobile application (Back End, Front End & Mobile)
+                            using every current programming technologies and im super fast learner, high logical thinking
+                            , only writing clean and readable code, best practise implementation and building app faster
                         </div>
                         <div className="h3 text-blue mb-2">
                             Project Leader
