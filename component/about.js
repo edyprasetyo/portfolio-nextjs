@@ -32,15 +32,15 @@ function About() {
                         <div className="h6 text-white mb-4">
                             Having more than 6 years as a Full Stack & Mobile Application Developer
                             , used to building many full stack & mobile application (Back End, Front End & Mobile)
-                            using every current programming technologies and im super fast learner, high logical thinking
+                            using every current programming technologies and i'm super fast learner, high logical thinking
                             , only writing clean and readable code, best practise implementation and building app faster
                         </div>
-                        <div className="h3 text-blue mb-2">
+                        {/* <div className="h3 text-blue mb-2">
                             Project Leader
                         </div>
                         <div className="h6 text-white mb-4">
                             Lead developed, design, and implement complex project
-                        </div>
+                        </div> */}
                         <div className="h3 text-blue mb-2">
                             Educational Background
                         </div>
