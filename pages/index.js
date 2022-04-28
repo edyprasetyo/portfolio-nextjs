@@ -91,7 +91,7 @@ export default function Home() {
       'cmd': false
     },
     {
-      'text': 'Current Job',
+      'text': 'My Current Position',
       'cmd': true
     },
     {
