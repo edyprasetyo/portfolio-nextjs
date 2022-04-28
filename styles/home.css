@@ -29,6 +29,7 @@
 
 .img-profile {
     cursor: pointer;
+    height: 400px;
 }
 
 .hljs {
@@ -58,8 +59,9 @@
 .Terminal-window {
     border: none !important;
     box-shadow: none !important;
-    background: rgb(17 22 42)  !important;
+    background: rgb(17 22 42) !important;
 }
+
 .Terminal-header {
     display: none !important;
 }
@@ -75,6 +77,10 @@
 
     .img-profile-parent {
         text-align: center;
+    }
+
+    .img-profile {
+        height: 250px;
     }
 
     .Terminal-term {
