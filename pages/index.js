@@ -95,7 +95,7 @@ export default function Home() {
       'cmd': true
     },
     {
-      'text': 'Full Stack & Mobile Application Developer',
+      'text': 'RnD Programmer Supervisor',
       'cmd': false
     },
     {
