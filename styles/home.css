@@ -66,6 +66,10 @@
     display: none !important;
 }
 
+.div-parent-terminal {
+    padding-top: 50px;
+}
+
 @media (max-width: 575.98px) {
     #index {
         padding-top: 70px;
