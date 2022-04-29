@@ -90,4 +90,8 @@
     .Terminal-term {
         height: 450px !important;
     }
+
+    .div-parent-terminal {
+        padding-top: 10px;
+    }
 }
