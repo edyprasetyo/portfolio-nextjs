@@ -12,14 +12,20 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      PAT: ${{ secrets.PAT }}
     steps:
       - name: "Build:checkout"
         uses: actions/checkout@v2
-      - name: 'Build:dockerimage'
-        uses: docker/build-push-action@v2
+      - name: Log in to the Container registry
+        uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
         with:
           registry: ghcr.io
-          username: "edyprasetyo"
+          username: edyprasetyo
           password: ${{ secrets.PAT }}
-          repository: edyprasetyo/portfolio-nextjs
-          tags: latest
+      - name: Build and push Docker image
+        uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
