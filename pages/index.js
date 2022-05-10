@@ -153,7 +153,7 @@ export default function Home() {
             </div>
             <div className="col-lg-6 div-parent-terminal">
               <div className="h1 text-green mb-2">
-                testing
+                testing dong
                 <strong>
                   <Terminal
                     lines={termLines}
