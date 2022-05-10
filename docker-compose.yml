@@ -1,0 +1,16 @@
+version: "3.3"
+
+services:
+  portfolio-nextjs:
+    ports:
+      - 9001:9001
+    build:
+      dockerfile: dockerfile
+    image: repo/portfolio-nextjs
+    container_name: portfolio-nextjs-web
+    volumes:
+      - /usr/src/app
+      - /usr/src/app/node_modules
+      - /usr/src/app/.next
+    env_file:
+      - .env

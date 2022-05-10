@@ -8,7 +8,10 @@ const nextConfig = {
     "fs",
     "net",
     "tls",
-  ]
+  ],
+  experimental: {
+    outputStandalone: true,
+  }
 }
 
 module.exports = nextConfig
