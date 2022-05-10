@@ -10,14 +10,15 @@ jobs:
   build:
     name: 'Build'
     runs-on: ubuntu-latest
-    env:
-      DATABASE_URL: ${{ secrets.DATABASE_URL }}
     steps:
       - name: 'Create env file'
         run: |
           touch .env
           echo DATABASE_URL=${{ secrets.DATABASE_URL }} >> .env
           cat .env
+      - name: "add database url"
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
       - name: "Build:checkout"
         uses: actions/checkout@v2
       - name: 'Build:dockerimage'
