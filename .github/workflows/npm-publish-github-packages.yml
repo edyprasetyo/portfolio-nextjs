@@ -27,4 +27,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: edyprasetyo/app:latest
+          tags: ghcr.io/edyprasetyo/portfolio-nextjs:latest
