@@ -83,7 +83,7 @@ export default function Home() {
       'cmd': true
     },
     {
-      'text': 'I\'m Edy Prasetyo',
+      'text': 'I\'m Emanuel adebayor',
       'cmd': false
     },
     {
