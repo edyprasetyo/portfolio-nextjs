@@ -38,9 +38,9 @@ jobs:
           docker-compose up --no-deps -d portfolio-nextjs
 
           
-      # - name: Build and push
-      #   uses: docker/build-push-action@v2
-      #   with:
-      #     context: .
-      #     push: true
-      #     tags: ghcr.io/edyprasetyo/portfolio-nextjs:latest
+      - name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
+          tags: ghcr.io/edyprasetyo/portfolio-nextjs:latest
