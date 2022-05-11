@@ -36,11 +36,3 @@ jobs:
           cd /usr/local/src/portfolio-nextjs
           docker build portfolio-nextjs
           docker-compose up --no-deps -d portfolio-nextjs
-
-          
-      # - name: Build and push
-      #   uses: docker/build-push-action@v2
-      #   with:
-      #     context: .
-      #     push: true
-      #     tags: ghcr.io/edyprasetyo/portfolio-nextjs:latest
