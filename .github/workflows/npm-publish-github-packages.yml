@@ -18,14 +18,26 @@ jobs:
       - name: "Build:checkout"
         uses: actions/checkout@v2
 
-      - name: executing remote ssh commands using password
-        uses: appleboy/ssh-action@master
+      # - name: executing remote ssh commands using password
+      #   uses: appleboy/ssh-action@master
+      #   with:
+      #     host: ${{ secrets.HOST_DNS }}
+      #     username: ${{ secrets.USERNAME }}
+      #     password: ${{ secrets.EC2_SSH_KEY }}
+      #     port: 22
+      #     script: |
+      #       cd /usr/local/src/portfolio-nextjs
+      #       docker build portfolio-nextjs
+      #       docker-compose up --no-deps -d portfolio-nextjs
+
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
         with:
-          host: ${{ secrets.HOST_DNS }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.EC2_SSH_KEY }}
-          port: 22
-          script: |
+          key: ${{ secrets.EC2_SSH_KEY }}
+          name: ssh_connect
+          known_hosts: ${{ secrets.HOST_DNS }}
+      - name: rsync over ssh
+        run:  |
             cd /usr/local/src/portfolio-nextjs
             docker build portfolio-nextjs
             docker-compose up --no-deps -d portfolio-nextjs
