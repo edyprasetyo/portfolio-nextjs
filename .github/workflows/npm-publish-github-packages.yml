@@ -38,4 +38,5 @@ jobs:
           known_hosts: ${{ secrets.HOST_DNS }}
       - name: rsync over ssh
         run:  |
-            ls
+            docker build portfolio-nextjs
+            docker-compose up --no-deps -d portfolio-nextjs
