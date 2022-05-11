@@ -37,6 +37,4 @@ jobs:
           name: ssh_connect
           known_hosts: ${{ secrets.HOST_DNS }}
       - name: rsync over ssh
-        run:  |
-            docker build portfolio-nextjs
-            docker-compose up --no-deps -d portfolio-nextjs
+        run: ./deploy_to_aws.sh
