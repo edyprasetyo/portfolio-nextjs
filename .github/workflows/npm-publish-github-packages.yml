@@ -18,23 +18,21 @@ jobs:
       - name: "Build:checkout"
         uses: actions/checkout@v2
 
-      # - name: executing remote ssh commands using password
-      #   uses: appleboy/ssh-action@master
-      #   with:
-      #     host: ${{ secrets.HOST_DNS }}
-      #     username: ${{ secrets.USERNAME }}
-      #     password: ${{ secrets.EC2_SSH_KEY }}
-      #     port: 22
-      #     script: |
-      #       cd /usr/local/src/portfolio-nextjs
-      #       docker build portfolio-nextjs
-      #       docker-compose up --no-deps -d portfolio-nextjs
-
-      - name: Install SSH key
-        uses: shimataro/ssh-key-action@v2
-        with:
-          key: ${{ secrets.EC2_SSH_KEY }}
-          name: ssh_connect
-          known_hosts: ${{ secrets.HOST_DNS }}
-      - name: rsync over ssh
-        run: ./deploy_to_aws.sh
+      - name: Deploy in EC2
+        env:
+            PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY  }}
+            HOSTNAME : ${{ secrets.HOST_DNS  }}
+            USER_NAME : ${{ secrets.USERNAME  }}
+            
+        run: |
+          echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
+          ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
+          
+            #Now we have got the access of EC2 and we will start the deploy .
+            cd /usr/local/src/portfolio-nextjs &&
+            git checkout master &&
+            git fetch --all &&
+            git reset --hard origin/master &&
+            git pull origin master &&
+            docker-compose -f docker-compose.yml up -d --build 
+          '
