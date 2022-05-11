@@ -11,9 +11,6 @@ jobs:
     name: 'Build'
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, 'ci skip')"
-    env:
-      DATABASE_URL: ${{ secrets.DATABASE_URL }}
-      PAT: ${{ secrets.PAT }}
     steps:
       - name: "Build:checkout"
         uses: actions/checkout@v2
@@ -22,8 +19,7 @@ jobs:
         env:
             PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY  }}
             HOSTNAME : ${{ secrets.HOST_DNS  }}
-            USER_NAME : ${{ secrets.USERNAME  }}
-            
+            USER_NAME : ${{ secrets.USERNAME  }}            
         run: |
           echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
           ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
