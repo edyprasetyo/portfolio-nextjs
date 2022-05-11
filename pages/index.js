@@ -83,7 +83,7 @@ export default function Home() {
       'cmd': true
     },
     {
-      'text': 'I\'m Crhistiano',
+      'text': 'My name\'s Edy Prasetyo',
       'cmd': false
     },
     {
