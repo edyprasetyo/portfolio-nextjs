@@ -6,11 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p $PORT",
-    "lint": "next lint",
-    "cypress": "cypress open",
-    "cypress:headless": "cypress run",
-    "e2e": "start-server-and-test start http://localhost:3000 cypress",
-    "e2e:headless": "start-server-and-test start http://localhost:3000 cypress:headless"
+    "lint": "next lint"
   },
   "dependencies": {
     "@nitric/react-animated-term": "^1.1.0",
@@ -44,7 +40,6 @@
     "toastify-js": "^1.11.2"
   },
   "devDependencies": {
-    "cypress": "^9.6.1",
     "eslint": "8.11.0",
     "eslint-config-next": "12.1.0",
     "prisma": "^3.11.0"
