@@ -15,6 +15,12 @@ jobs:
       - name: "Build:checkout"
         uses: actions/checkout@v2
 
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          # Specify Browser since container image is compile with Firefox
+          browser: firefox
+
       - name: Deploy in EC2
         env:
             PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY  }}
