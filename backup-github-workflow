@@ -25,6 +25,13 @@ jobs:
           username: edyprasetyo
           password: ${{ secrets.PAT }}
 
+      
+      # - name: Cypress run
+      #   uses: cypress-io/github-action@v2
+      #   with:
+      #     # Specify Browser since container image is compile with Firefox
+      #     browser: firefox
+
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
         with:
