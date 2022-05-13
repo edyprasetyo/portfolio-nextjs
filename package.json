@@ -40,6 +40,7 @@
     "toastify-js": "^1.11.2"
   },
   "devDependencies": {
+    "cypress": "^9.6.1",
     "eslint": "8.11.0",
     "eslint-config-next": "12.1.0",
     "prisma": "^3.11.0"

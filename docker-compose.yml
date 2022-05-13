@@ -15,7 +15,7 @@ services:
   #     - MYSQL_DATABASE=edyDB
 
   portfolio-nextjs:
-    image: repo/portfolio-nextjs
+    image: repo/portfolio-nextjs:latest
     container_name: portfolio-nextjs-web
     ports:
       - 9001:9001
