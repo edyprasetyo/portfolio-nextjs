@@ -16,7 +16,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name : "test cypress"
-        run  : npm run test
+        run  : |
+          npm i
+          npm run test
 
       - name: Deploy in EC2
         env:
