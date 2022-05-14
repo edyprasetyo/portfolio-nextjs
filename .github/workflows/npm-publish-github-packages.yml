@@ -35,6 +35,6 @@ jobs:
             git fetch --all &&
             git reset --hard origin/main &&
             git pull origin main &&
-            docker-compose build portfolio-nextjs
-            docker-compose up --no-deps -d portfolio-nextjs
+            docker system prune -af
+            docker-compose up
           '
