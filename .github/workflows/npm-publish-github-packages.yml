@@ -35,6 +35,6 @@ jobs:
             git fetch --all &&
             git reset --hard origin/main &&
             git pull origin main &&           
-            docker-compose up &&
+            docker-compose up -d &&
             docker system prune -af
           '
