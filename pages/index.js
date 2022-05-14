@@ -79,7 +79,7 @@ export default function Home() {
 
   const termLines = [
     {
-      'text': 'Hi',
+      'text': 'Hello',
       'cmd': true
     },
     {
