@@ -3,7 +3,7 @@ version: "3.3"
 services:
 
   db:
-    image: mysql:5.7.38-debian
+    image: mysql:8.0.29-oracle
     container_name: portfolio-nextjs-db
     ports:
       - 3306:3306
