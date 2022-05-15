@@ -7,4 +7,4 @@ ssh ec2-user@34.222.141.246 "
         docker build portfolio-nextjs
         docker-compose up --no-deps -d portfolio-nextjs
         "
-echo 'Deployment completed successfully'
+echo 'Deployment completed successfullys'
