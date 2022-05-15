@@ -18,4 +18,4 @@ services:
       - /usr/src/app/.next
     restart: always
     env_file:
-      - .env
+      - .env.prod
