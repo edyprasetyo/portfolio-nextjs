@@ -76,16 +76,16 @@ function Projects() {
                         <div className="h5 text-white text-center mt-3">
                             Book Bus Ticket Online(Website, Android, IOS)
                         </div>
-                        <div className="text-center mt-3">
+                        <div className="text-center mt-3 hide-visit">
                             <span className="visit-page" onClick={gotoUnicornPage}>Visit Page</span>
                         </div>
-                        <div className="text-center mt-1">
+                        <div className="text-center mt-1 hide-visit">
                             <span className="visit-page" onClick={downloadUnicornAPK}>Download APK</span>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12 div-img-unicorn">
                         <img className="img-unicorn img-fluid" src="/images/unicorn/unicorn.png" />
-                        <button type="submit" className="button btn-visit-page" onClick={gotoUnicornPage}>Visit Page</button>
+                        <button type="submit" className="button btn-visit-page hide-visit" onClick={gotoUnicornPage}>Visit Page</button>
                     </div>
                 </div>
 
@@ -99,7 +99,7 @@ function Projects() {
                         <div className="h5 text-white text-center mt-3">
                             Checking In/Out Passengers, Bus Manifest, Trip Schedule and Ordering Restaurant Menu(Android, IOS)
                         </div>
-                        <div className="text-center text-white mt-3">
+                        <div className="text-center text-white mt-3 hide-visit">
                             <div>
                                 User ID : edy
                             </div>
@@ -108,13 +108,13 @@ function Projects() {
                                 Password : 123
                             </div>
                         </div>
-                        <div className="text-center mt-3">
+                        <div className="text-center mt-3 hide-visit">
                             <span className="visit-page" onClick={downloadUnicornCrewAPK}>Download APK</span>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12 div-img-unicorn">
                         <img className="img-unicorn img-fluid" src="/images/unicorncrew/unicorncrew.png" />
-                        <button type="submit" className="button btn-visit-page" onClick={downloadUnicornCrewAPK}>Download APK</button>
+                        <button type="submit" className="button btn-visit-page hide-visit" onClick={downloadUnicornCrewAPK}>Download APK</button>
                     </div>
                 </div>
 
@@ -128,13 +128,13 @@ function Projects() {
                         <div className="h5 text-white text-center mt-3">
                             Book Bus Ticket Online Admin Panel(Website)
                         </div>
-                        <div className="text-center mt-3">
+                        <div className="text-center mt-3 hide-visit">
                             <span className="visit-page" onClick={gotoUnicornAdminPage}>Visit Page</span>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12 div-img-unicorn">
                         <img className="img-unicorn img-fluid" src="/images/unicorn/unicorn_admin.png" />
-                        <button type="submit" className="button btn-visit-page" onClick={gotoUnicornAdminPage}>Visit Page</button>
+                        <button type="submit" className="button btn-visit-page hide-visit" onClick={gotoUnicornAdminPage}>Visit Page</button>
                     </div>
                 </div>
 
@@ -148,13 +148,13 @@ function Projects() {
                         <div className="h5 text-white text-center mt-3">
                             Car Rental Online And Airport Transfer(Website, Android, IOS)
                         </div>
-                        <div className="text-center mt-3">
+                        <div className="text-center mt-3 hide-visit">
                             <span className="visit-page" onClick={gotoElitePage}>Visit Page</span>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12 div-img-unicorn">
                         <img className="img-unicorn img-fluid" src="/images/elite/elite.png" />
-                        <button type="submit" className="button btn-visit-page" onClick={gotoElitePage}>Visit Page</button>
+                        <button type="submit" className="button btn-visit-page hide-visit" onClick={gotoElitePage}>Visit Page</button>
                     </div>
                 </div>
 
@@ -168,13 +168,13 @@ function Projects() {
                         <div className="h5 text-white text-center mt-3">
                             Car Rental Online And Airport Transfer Admin Panel(Website)
                         </div>
-                        <div className="text-center mt-3">
+                        <div className="text-center mt-3 hide-visit">
                             <span className="visit-page" onClick={gotoEliteAdminPage}>Visit Page</span>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12 div-img-unicorn">
                         <img className="img-unicorn img-fluid" src="/images/elite/elite_admin.png" />
-                        <button type="submit" className="button btn-visit-page" onClick={gotoEliteAdminPage}>Visit Page</button>
+                        <button type="submit" className="button btn-visit-page hide-visit" onClick={gotoEliteAdminPage}>Visit Page</button>
                     </div>
                 </div>
 
@@ -188,13 +188,13 @@ function Projects() {
                         <div className="h5 text-white text-center mt-3">
                             Order Shipping / Tracking Parcels And Packages(Website)
                         </div>
-                        <div className="text-center mt-3">
+                        <div className="text-center mt-3 hide-visit">
                             <span className="visit-page" onClick={gotoSipExpressPlusPage}>Visit Page</span>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12 div-img-unicorn">
                         <img className="img-unicorn img-fluid" src="/images/sipexpress/sipexpress.png" />
-                        <button type="submit" className="button btn-visit-page" onClick={gotoSipExpressPlusPage}>Visit Page</button>
+                        <button type="submit" className="button btn-visit-page hide-visit" onClick={gotoSipExpressPlusPage}>Visit Page</button>
                     </div>
                 </div>
 
@@ -208,13 +208,13 @@ function Projects() {
                         <div className="h5 text-white text-center mt-3">
                             Picking Up / Delivering Parcels And Packages To Customers(Android, IOS)
                         </div>
-                        <div className="text-center mt-3">
+                        <div className="text-center mt-3 hide-visit">
                             <span className="visit-page" onClick={gotoSipExpressKurirPage}>Visit Page</span>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12 div-img-unicorn">
                         <img className="img-unicorn img-fluid" src="/images/sipexpresskurir/sipexpresskurir.png" />
-                        <button type="submit" className="button btn-visit-page" onClick={gotoSipExpressKurirPage}>Visit Page</button>
+                        <button type="submit" className="button btn-visit-page hide-visit" onClick={gotoSipExpressKurirPage}>Visit Page</button>
                     </div>
                 </div>
 
@@ -228,13 +228,13 @@ function Projects() {
                         <div className="h5 text-white text-center mt-3">
                             CSM Group Company Website
                         </div>
-                        <div className="text-center mt-3">
+                        <div className="text-center mt-3 hide-visit">
                             <span className="visit-page" onClick={gotoCSMWebPage}>Visit Page</span>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12 div-img-unicorn">
                         <img className="img-unicorn img-fluid" src="/images/csmweb/csmweb.png" />
-                        <button type="submit" className="button btn-visit-page" onClick={gotoCSMWebPage}>Visit Page</button>
+                        <button type="submit" className="button btn-visit-page hide-visit" onClick={gotoCSMWebPage}>Visit Page</button>
                     </div>
                 </div>
 
@@ -248,13 +248,13 @@ function Projects() {
                         <div className="h5 text-white text-center mt-3">
                             Indorent Company Profile Website
                         </div>
-                        <div className="text-center mt-3">
+                        <div className="text-center mt-3 hide-visit">
                             <span className="visit-page" onClick={gotoIndorentWebPage}>Visit Page</span>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12 div-img-unicorn">
                         <img className="img-unicorn img-fluid" src="/images/indorentweb/indorentweb.png" />
-                        <button type="submit" className="button btn-visit-page" onClick={gotoIndorentWebPage}>Visit Page</button>
+                        <button type="submit" className="button btn-visit-page hide-visit" onClick={gotoIndorentWebPage}>Visit Page</button>
                     </div>
                 </div>
 
@@ -268,13 +268,13 @@ function Projects() {
                         <div className="h5 text-white text-center mt-3">
                             E-Recruitment For Hiring And Tracking Progress of a New Employee
                         </div>
-                        <div className="text-center mt-3">
+                        <div className="text-center mt-3 hide-visit">
                             <span className="visit-page" onClick={gotoRecruitmentPage}>Visit Page</span>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12 div-img-unicorn">
                         <img className="img-unicorn img-fluid" src="/images/recruitment/recruitment.png" />
-                        <button type="submit" className="button btn-visit-page" onClick={gotoRecruitmentPage}>Visit Page</button>
+                        <button type="submit" className="button btn-visit-page hide-visit" onClick={gotoRecruitmentPage}>Visit Page</button>
                     </div>
                 </div>
 
@@ -288,13 +288,13 @@ function Projects() {
                         <div className="h5 text-white text-center mt-3">
                             Collecting Customer Feedback to Improve Customer Service
                         </div>
-                        <div className="text-center mt-3">
+                        <div className="text-center mt-3 hide-visit">
                             <span className="visit-page" onClick={gotoCSSPage}>Visit Page</span>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12 div-img-unicorn">
                         <img className="img-unicorn img-fluid" src="/images/survey/survey.png" />
-                        <button type="submit" className="button btn-visit-page" onClick={gotoCSSPage}>Visit Page</button>
+                        <button type="submit" className="button btn-visit-page hide-visit" onClick={gotoCSSPage}>Visit Page</button>
                     </div>
                 </div>
 
@@ -308,13 +308,13 @@ function Projects() {
                         <div className="h5 text-white text-center mt-3">
                             Book a Meeting Room Online
                         </div>
-                        <div className="text-center mt-3">
+                        <div className="text-center mt-3 hide-visit">
                             <span className="visit-page" onClick={gotoMRBSPage}>Visit Page</span>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12 div-img-unicorn">
                         <img className="img-unicorn img-fluid" src="/images/meetingroom/meetingroom.png" />
-                        <button type="submit" className="button btn-visit-page" onClick={gotoMRBSPage}>Visit Page</button>
+                        <button type="submit" className="button btn-visit-page hide-visit" onClick={gotoMRBSPage}>Visit Page</button>
                     </div>
                 </div>
 
@@ -328,13 +328,13 @@ function Projects() {
                         <div className="h5 text-white text-center mt-3">
                             Helping Customers Keeping Records For All of Their Vehicles' Historical Maintenance
                         </div>
-                        <div className="text-center mt-3">
+                        <div className="text-center mt-3 hide-visit">
                             <span className="visit-page" onClick={gotoVMTPage}>Visit Page</span>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12 div-img-unicorn">
                         <img className="img-unicorn img-fluid" src="/images/vmt/vmt.png" />
-                        <button type="submit" className="button btn-visit-page" onClick={gotoVMTPage}>Visit Page</button>
+                        <button type="submit" className="button btn-visit-page hide-visit" onClick={gotoVMTPage}>Visit Page</button>
                     </div>
                 </div>
 

@@ -23,11 +23,12 @@ export default function Layout({ children }) {
             <Script src="https://code.iconify.design/2/2.1.2/iconify.min.js" />
             <Script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js" />
             <Header />
-            <div onClick={setNavbarCollapse}>
+            <main onClick={setNavbarCollapse}>
                 {children}
-            </div>
 
-            <Footer />
+                <Footer />
+            </main>
+
         </>
     )
 }
