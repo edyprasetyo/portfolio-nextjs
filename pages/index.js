@@ -13,6 +13,7 @@ import Projects from './../component/projects';
 import Skills from './../component/skills';
 
 
+
 export const getServerSideProps = async ({ req, res }) => {
 
   const cookies = new Cookies(req, res)
@@ -139,6 +140,7 @@ export default function Home() {
       'cmd': false
     },
   ]
+
 
   return (
     <Layout>
