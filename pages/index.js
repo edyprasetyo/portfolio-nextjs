@@ -40,7 +40,7 @@ export const getServerSideProps = async ({ req, res }) => {
         },
         update: {
           ID: 1,
-          JumlahPengunjung: outillog.JumlahPengunjung + 1
+          JumlahPengunjung: outillog == null ? 1 : outillog.JumlahPengunjung + 1
         },
         create: {
           ID: 1,
