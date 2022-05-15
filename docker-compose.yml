@@ -5,6 +5,8 @@ services:
   portfolio-nextjs:
     image: repo/portfolio-nextjs:latest
     container_name: portfolio-nextjs-web
+    depends_on:
+      - db
     ports:
       - 9001:9001
     build:
