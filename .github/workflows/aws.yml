@@ -31,6 +31,9 @@ jobs:
                     
             #Now we have got the access of EC2 and we will start the deploy .
             cd /usr/local/src/portfolio-nextjs &&
+            docker-compose -f docker-compose.mysql.yml down &&
+            docker system prune -af &&
+            docker-compose -f docker-compose.mysql.yml up -d &&
             git checkout main &&
             git fetch --all &&
             git reset --hard origin/main &&
