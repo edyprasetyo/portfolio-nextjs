@@ -1,18 +1,18 @@
 version: "3.3"
 
 services:
-  # db:
-  #   image: mysql:8
-  #   container_name: portfolio-nextjs-db
-  #   ports:
-  #     - 3306:3306
-  #   volumes:
-  #     - ~/apps/mysql:/var/lib/mysql
-  #   environment:
-  #     - MYSQL_ROOT_PASSWORD=12345
-  #     - MYSQL_PASSWORD=12345
-  #     - MYSQL_USER=edy
-  #     - MYSQL_DATABASE=edyDB
+  db:
+    image: mysql:8
+    container_name: portfolio-nextjs-db
+    ports:
+      - 3306:3306
+    volumes:
+      - ~/apps/mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=12345
+      - MYSQL_PASSWORD=12345
+      - MYSQL_USER=edy
+      - MYSQL_DATABASE=edyDB
 
   portfolio-nextjs:
     image: repo/portfolio-nextjs:latest
