@@ -1,6 +1,12 @@
 version: "3.3"
 
 services:
+  podinfo:
+    image: stefanprodan/podinfo:latest
+    container_name: podinfo-web
+    ports:
+      - 9002:9898
+    restart: always
 
   portfolio-nextjs:
     image: repo/portfolio-nextjs:latest
