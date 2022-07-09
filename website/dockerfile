@@ -19,4 +19,7 @@ RUN bun add bun-framework-next
 RUN echo "framework = 'next'" > bunfig.toml
 RUN bun bun
 
+EXPOSE 9001
+ENV PORT 9001
+
 CMD bun dev
