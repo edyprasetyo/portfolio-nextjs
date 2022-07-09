@@ -1,57 +1,22 @@
-# Install dependencies only when needed
-FROM node:16-alpine AS deps
-# Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
-RUN apk add --no-cache libc6-compat
+FROM ubuntu:22.04
+
+WORKDIR /bun
+
+RUN apt-get update
+RUN apt-get install curl unzip -y
+RUN curl --fail --location --progress-bar --output "/bun/bun.zip" "https://github.com/Jarred-Sumner/bun/releases/download/bun-v0.1.1/bun-linux-x64.zip"
+RUN unzip -d /bun -q -o "/bun/bun.zip"
+RUN mv /bun/bun-linux-x64/bun /usr/local/bin/bun
+RUN chmod 777 /usr/local/bin/bun
+
 WORKDIR /app
-# COPY package.json yarn.lock ./
-# RUN yarn install --frozen-lockfile
+RUN addgroup --gid 101 --system appuser && adduser --uid 101 --system appuser
+RUN chown -R 101:101 /app && chmod -R g+w /app
+USER appuser
+COPY ./website ./
 
-# If using npm with a `package-lock.json` comment out above and use below instead
-COPY ./website/package.json ./website/package-lock.json ./ 
-RUN npm ci
+RUN bun add bun-framework-next
+RUN echo "framework = 'next'" > bunfig.toml
+RUN bun bun
 
-# Rebuild the source code only when needed
-FROM node:16-alpine AS builder
-WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
-COPY ./website .
-
-# Next.js collects completely anonymous telemetry data about general usage.
-# Learn more here: https://nextjs.org/telemetry
-# Uncomment the following line in case you want to disable telemetry during the build.
-# ENV NEXT_TELEMETRY_DISABLED 1
-
-# RUN yarn build
-
-# If using npm comment out above and use below instead
-RUN npx prisma generate
-RUN npm run build
-
-# Production image, copy all the files and run next
-FROM node:16-alpine AS runner
-WORKDIR /app
-
-# ENV NODE_ENV production
-# Uncomment the following line in case you want to disable telemetry during runtime.
-# ENV NEXT_TELEMETRY_DISABLED 1
-
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
-
-# You only need to copy next.config.js if you are NOT using the default configuration
-# COPY --from=builder /app/next.config.js ./
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/package.json ./package.json
-
-# Automatically leverage output traces to reduce image size 
-# https://nextjs.org/docs/advanced-features/output-file-tracing
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-
-USER nextjs
-
-EXPOSE 9001
-
-ENV PORT 9001
-
-CMD ["node", "server.js"]
+CMD bun dev
