@@ -21,5 +21,6 @@ RUN bun bun
 
 EXPOSE 9001
 ENV PORT 9001
+RUN bun run build
 
-CMD bun dev
+CMD bun run start
